@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemesix - NemPos</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/439883d3d6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/style.css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo-box">
+      <img class="logo" src="img/logo-header.png" alt="NemPOS logo" />
+    </a>
+    
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="index.html">Home</a></li>
+        <li><a class="main-nav-link nav-cta" id="openModalBtn" href="#contatti">Richiedi demo</a></li>
+      </ul>
+    </nav>
+
+    
+
+<!-- Modal -->
+<div id="demoModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Richiedi una demo</h2>
+    <p>Compila il modulo per ricevere informazioni sulla suite NemPOS.</p>
+    <form class="contact-form">
+      <div>
+        <label for="modalName">Nome</label>
+        <input id="modalName" type="text" required placeholder="Il tuo nome" />
+      </div>
+      <div>
+        <label for="modalEmail">Email</label>
+        <input id="modalEmail" type="email" required placeholder="nome@email.com" />
+      </div>
+      <div>
+        <label for="modalMessage">Messaggio</label>
+        <textarea id="modalMessage" rows="4" placeholder="Scrivi il tuo messaggio..."></textarea>
+      </div>
+      <button type="submit" class="btn btn--full">Invia</button>
+    </form>
+  </div>
+</div>
+
+
+
+    
+    <button class="btn-mobile-nav" aria-label="Menu">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </header>
+  
+  <div class="nav-overlay"></div>
+  
+  
+  <div class="event-card">
+    <img src="img/Google Classroom Header American Sign Language.gif" class="event-img" alt="Evento">
+    <h3 class="event-title">Prossimo Evento</h3>
+  </div>
+
+    <section class="section-prodotti" id="prodotti">
+      <div class="container">
+        <h2 class="heading-secondary">I nostri prodotti</h2>
+        <p class="subheading">Una suite completa per la gestione del tuo business.</p>
+    
+        <div class="prodotti-grid">
+          <div class="prodotto-card">
+            <img src="img/IllustrazioneCassa.png" alt="Casse Automatiche">
+            <h3 class="heading-tertiary">Casse Automatiche</h3>
+            <p>Gestione sicura dei pagamenti in denaro contante nel mondo Retail & Food.</p>
+            <button class="btn btn--full" id="openModalBtn1">Richiedi demo</button>
+          </div>
+    
+          <div class="prodotto-card">
+            <img src="img/iconSoftware.png" alt="Software Gestionali">
+            <h3 class="heading-tertiary">Software Gestionali</h3>
+            <p>Il Software per l'integrazione delle nostre soluzioni nel punto vendita.</p>
+            <button class="btn btn--full" id="openModalBtn2">Richiedi demo</button>
+          </div>
+    
+          <div class="prodotto-card">
+            <img src="img/iconbackoffice.png" alt="NemPOS BackOffice">
+            <h3 class="heading-tertiary">NemPOS BackOffice</h3>
+            <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
+            <button class="btn btn--full" id="openModalBtn3">Richiedi demo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+  <footer class="footer">
+    <div class="container grid grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img src="img/logoFooter_White.png" alt="NemPOS logo" />
+        </a>
+      </div>
+
+      
+      <div class="address-col">
+        <p style="font-weight: 600; font-size: 1.6rem; margin-bottom: 1.6rem;">Contatti</p>
+        <address style="font-style: normal; font-size: 1.4rem; line-height: 1.8;">
+          <p>Via Zappiano, 1C<br>41012, Carpi (MO)</p>
+          <p><a href="tel:+39020000000">+39 059 59 666 59</a><br />
+            <a href="mailto:info@nempos.com">info@nemesix.com</a></p>
+          <p>P.IVA \ C.F. 03099200366
+          </p>
+          <div class="icons-container">
+            <div class="container-icon">
+ 
+              <a href="https://www.instagram.com/nempossuite" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"  viewBox="0 0 512 512">
+                  <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/>
+                  <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/nemesixsrl" target="_blank" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                  <path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"/>
+                </svg>
+              </a>
+              <a href="https://it.linkedin.com/in/nemesixsrlsistemidicassa?trk=public_post_follow-view-profile" target="_blank" aria-label="Linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg"  class="ionicon s-ion-icon"  viewBox="0 0 666 680"><path fill="#ffffff" d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/></svg>
+
+              </a>
+            </div>
+        </div>
+        </address>
+        <div class="footer-bottom">
+          <p>© 2025 Nemesix S.r.l. — Tutti i diritti riservati</p>
+        </div>
+      </div>
+      
+      
+      <div class="nav-col">
+        <p style="font-weight: 600; font-size: 1.6rem; margin-bottom: 1.6rem;">Link utili</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">Privacy Policy</a></li>
+          <li><a class="footer-link" href="#">Termini e condizioni</a></li>
+          <li><a class="footer-link" href="#">Supporto</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
