@@ -124,3 +124,30 @@ if (modal) {
     }
   });
 }
+
+
+//cambio frase nel titolo
+const phrases = [
+  "Veloce e intuitivo",
+  "Sempre a norma fiscale",
+  "Perfetto per negozi e ristoranti",
+  "Assistenza rapida e dedicata"
+];
+
+const heroDynamic = document.getElementById("heroDynamic");
+
+if (heroDynamic) {
+  let index = 0;
+  heroDynamic.textContent = phrases[0];
+
+  setInterval(() => {
+    heroDynamic.style.opacity = 0;
+
+    setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      heroDynamic.textContent = phrases[index];
+      heroDynamic.style.color = "#FAEAB1"
+      heroDynamic.style.opacity = 1;
+    }, 400);
+  }, 3500);
+}

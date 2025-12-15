@@ -1,0 +1,67 @@
+/* ===========================
+   MENU MOBILE - EFFETTI SPECIALI
+=========================== */
+
+@media (max-width: 944px) {
+  /* Animazione slide in per menu mobile */
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Reset animazione per mobile */
+  .header.nav-open .main-nav-list li {
+    animation: slideInFromRight 0.4s ease forwards;
+  }
+
+  /* Overlay con fade in */
+  .nav-overlay {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .header.nav-open ~ .nav-overlay {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(3px);
+  }
+
+  /* Effetto glow sui link mobile */
+  .main-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  }
+
+  /* CTA mobile con animazione pulse */
+  @keyframes pulse {
+    0%, 100% {
+      box-shadow: 0 4px 15px rgba(0, 183, 255, 0.4);
+    }
+    50% {
+      box-shadow: 0 4px 25px rgba(0, 183, 255, 0.6);
+    }
+  }
+
+  .nav-cta {
+    animation: pulse 2s infinite;
+  }
+
+  .nav-cta:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+    transform: scale(1.08);
+    animation: none;
+  }
+}
+
+/* Effetto smooth per l'hamburger */
+.hamburger span {
+  transform-origin: center;
+}
