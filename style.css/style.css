@@ -589,7 +589,12 @@ body {
   margin: 0 auto;
 
 }
-
+.btn--full.card{
+  background-color: var(--color-primary);
+}
+.btn--full.card:hover{
+  background-color: var(--color-primary-light);
+}
 .pricing-card {
   position: relative;
   overflow: hidden;
@@ -1358,4 +1363,20 @@ fill: var(--color-white);
 .fade-in-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fix scroll mobile - versione aggressiva */
+html.nav-open,
+html.nav-open body {
+  overflow: hidden !important;
+  height: 100% !important;
+  position: fixed !important;
+  width: 100% !important;
+  touch-action: none !important;
+}
+
+@media (max-width: 944px) {
+  .main-nav {
+    touch-action: pan-y !important;
+  }
 }

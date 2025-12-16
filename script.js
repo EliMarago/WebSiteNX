@@ -25,11 +25,14 @@ if (sectionHeroEl) {
   const obs = new IntersectionObserver(
     function (entries) {
       const ent = entries[0];
+      console.log("IsIntersecting:", ent.isIntersecting);
 
       if (!ent.isIntersecting) {
         document.body.classList.add("sticky");
+        console.log("Added sticky class");
       } else {
         document.body.classList.remove("sticky");
+        console.log("Removed sticky class");
       }
     },
     {
@@ -42,52 +45,56 @@ if (sectionHeroEl) {
   obs.observe(sectionHeroEl);
 }
 
+
+
 // ====================================
-// MOBILE NAVIGATION - SOLUZIONE CORRETTA
+// MOBILE NAVIGATION
 // ====================================
 const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
 const navOverlay = document.querySelector(".nav-overlay");
+const body = document.body;
 
 if (btnNav && header) {
   btnNav.addEventListener("click", () => {
     header.classList.toggle("nav-open");
-    
-    // Gestione scroll del body
     if (header.classList.contains("nav-open")) {
-      document.body.style.overflow = "hidden";
-      document.body.style.position = "fixed"; // IMPORTANTE: previene lo scroll
-      document.body.style.width = "100%"; // Previene il salto del layout
+      body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
+      body.style.overflow = "auto";
     }
   });
 }
 
 // Chiudi cliccando sui link
-const mainNavLinks = document.querySelectorAll(".main-nav-link");
-mainNavLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    if (header) {
+document.querySelectorAll(".main-nav-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    // se è un anchor interno (#)
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+
+      // chiudi menu
       header.classList.remove("nav-open");
-      // Ripristina lo scroll
-      document.body.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.width = "";
+      body.style.overflow = "auto";
+
+      // aspetta un frame, poi scrolla
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 300);
     }
   });
 });
+
 
 // Chiudi cliccando sull'overlay
 if (navOverlay && header) {
   navOverlay.addEventListener("click", () => {
     header.classList.remove("nav-open");
-    // Ripristina lo scroll
-    document.body.style.overflow = "";
-    document.body.style.position = "";
-    document.body.style.width = "";
+    body.style.overflow = "auto";
   });
 }
 
@@ -118,15 +125,59 @@ if (modal) {
   });
 }
 
-// ====================================
-// ANIMAZIONI ON SCROLL
-// ====================================
+
+//cambio frase nel titolo
+const phrases = [
+  "Veloce e intuitivo",
+  "Sempre a norma fiscale",
+  "Perfetto per negozi e ristoranti",
+  "Assistenza rapida e dedicata"
+];
+
+const heroDynamic = document.getElementById("heroDynamic");
+
+if (heroDynamic) {
+  let index = 0;
+  heroDynamic.textContent = phrases[0];
+
+  setInterval(() => {
+    heroDynamic.style.opacity = 0;
+
+    setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      heroDynamic.textContent = phrases[index];
+      heroDynamic.style.color = "#FAEAB1"
+      heroDynamic.style.opacity = 1;
+    }, 400);
+  }, 3500);
+}
+
+
+//smooth scrolling 
+// Aggiungi al tuo script.js
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offset = 100; // Offset per header sticky
+      const targetPosition = target.offsetTop - offset;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+//animazioni scroll
+// Animazioni quando elementi entrano nel viewport
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -100px 0px'
 };
 
-const fadeObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('fade-in-visible');
@@ -137,34 +188,6 @@ const fadeObserver = new IntersectionObserver((entries) => {
 // Applica a elementi che vuoi animare
 document.querySelectorAll('.feature, .pricing-card, .solution-item').forEach(el => {
   el.classList.add('fade-in-hidden');
-  fadeObserver.observe(el);
+  observer.observe(el);
 });
 
-// ====================================
-// SMOOTH SCROLL
-// ====================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    
-    if (href === '#') {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-      return;
-    }
-    
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      const offset = 100;
-      const targetPosition = target.offsetTop - offset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
