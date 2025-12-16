@@ -1077,6 +1077,7 @@ fill: var(--color-white);
     gap: 8rem; /* Ridotto da 10rem */
     padding: 0 2rem;
     margin-bottom: 0; /* Rimuove margine per attaccare al footer */
+    margin-top: -29px;
   }
   .header.nav-open .main-nav-list li {
     animation: slideInFromRight 0.4s ease forwards;
