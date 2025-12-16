@@ -68,13 +68,27 @@ if (btnNav && header) {
 
 // Chiudi cliccando sui link
 document.querySelectorAll(".main-nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    if (header) {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    // se è un anchor interno (#)
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+
+      // chiudi menu
       header.classList.remove("nav-open");
       body.style.overflow = "auto";
+
+      // aspetta un frame, poi scrolla
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({
+          behavior: "smooth"
+        });
+      }, 300);
     }
   });
 });
+
 
 // Chiudi cliccando sull'overlay
 if (navOverlay && header) {
@@ -109,4 +123,31 @@ if (modal) {
       modal.style.display = "none";
     }
   });
+}
+
+
+//cambio frase nel titolo
+const phrases = [
+  "Veloce e intuitivo",
+  "Sempre a norma fiscale",
+  "Perfetto per negozi e ristoranti",
+  "Assistenza rapida e dedicata"
+];
+
+const heroDynamic = document.getElementById("heroDynamic");
+
+if (heroDynamic) {
+  let index = 0;
+  heroDynamic.textContent = phrases[0];
+
+  setInterval(() => {
+    heroDynamic.style.opacity = 0;
+
+    setTimeout(() => {
+      index = (index + 1) % phrases.length;
+      heroDynamic.textContent = phrases[index];
+      heroDynamic.style.color = "#FAEAB1"
+      heroDynamic.style.opacity = 1;
+    }, 400);
+  }, 3500);
 }
