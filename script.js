@@ -151,6 +151,7 @@ if (heroDynamic) {
     }, 400);
   }, 3500);
 }
+<<<<<<< HEAD
 
 
 //smooth scrolling 
@@ -190,3 +191,5 @@ document.querySelectorAll('.feature, .pricing-card, .solution-item').forEach(el 
   el.classList.add('fade-in-hidden');
   observer.observe(el);
 });
+=======
+>>>>>>> 1a06b444a338adbb6515cf31ffa9da82dd8aabc2
