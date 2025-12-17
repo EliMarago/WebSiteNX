@@ -9,7 +9,7 @@
 
 html,
 body {
-  font-size: 62.5%;
+  font-size: 47.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -113,8 +113,8 @@ body {
 }
 
 .logo {
-  height: 95px;
-  margin-left: 45px;
+  height: 70px;
+  margin-left: 30px;
 }
 
 /* HAMBURGER */
@@ -132,8 +132,8 @@ body {
   padding: 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  width: 39px;
-  height: 39px;
+  width: 34px;
+  height: 34px;
 }
 
 .btn-mobile-nav:hover {
@@ -299,6 +299,7 @@ body {
 /* ===========================
    HERO
 =========================== */
+
 .section-hero {
   position: relative;
   overflow: hidden;
@@ -339,6 +340,14 @@ body {
   margin-bottom: 3.2rem;
   color: #e9f4ff;
 }
+.hero-description span{
+  color: var(--color-primary);
+  font-weight: bold;
+
+}
+.section-contatti p{
+    color: var(--color-primary);
+  }
 .fade-in {
   animation: fadeIn 0.6s ease forwards;
 }
@@ -420,6 +429,7 @@ body {
   color: var(--color-grey-dark);
   transform: scale(1.05);
 }
+
 /*sezione dati*/
 .dati-container {
   max-width: 120rem;
@@ -454,7 +464,6 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 4rem;
-  flex-wrap: wrap;
 }
 .dati-text {
   flex: 1 1 45%;
@@ -464,6 +473,8 @@ body {
   max-width: 500px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-left: 1px;
+
 }
 .primary-text {
   color: var(--color-primary);
@@ -496,7 +507,7 @@ body {
   content: "NUOVO EVENTO";
   position: absolute;
   bottom: 7px;
-  right: 500px;
+  right: 400px;
   background: linear-gradient(
     135deg,
     var(--color-accent),
@@ -613,6 +624,11 @@ body {
 /* ===========================
    PRICING
 =========================== */
+.pricing-card h4{
+  font-size: 1.5rem;
+  padding: 4rem;
+  
+}
 
 .pricing-section {
   padding: 80px 0;
@@ -707,7 +723,7 @@ body {
 }
 .section-contatti {
   background-color: var(--color-grey-light);
-  padding: 12rem 0;
+  padding: 3rem 0;
 }
 .contact-text-box {
   padding-right: 4.8rem;
@@ -716,11 +732,14 @@ body {
 .contact-info a {
   color: var(--color-primary);
   text-decoration: none;
+  
 }
 .contact-info {
   list-style: none;
   font-size: 1.9rem;
   line-height: 1.8;
+  margin-left: 2rem;
+
 }
 .contact-info a:hover {
   text-decoration: underline;
@@ -741,7 +760,7 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 3.4rem;
 }
 .contact-form label {
   font-size: 1.4rem;
@@ -951,7 +970,7 @@ body {
   margin-bottom: 200px;
 }
 .section-featured#prodotti {
-  padding-top: 12rem; /* aumenta lo spazio sopra la sezione */
+  padding-top: 6rem; /* aumenta lo spazio sopra la sezione */
   padding-bottom: 10rem; /* mantiene lo spazio sotto */
 }
 .section-featured {
@@ -967,6 +986,7 @@ body {
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.4s, box-shadow 0.4s;
+
 }
 
 .prodotto-card:hover {
@@ -976,8 +996,8 @@ body {
 
 .prodotto-card img {
   width: 120px;
-  height: 120px;
-  margin-bottom: 1.5rem;
+  height: 200px;
+  margin-bottom: 5.5rem;
 }
 
 .prodotto-card h3 {
@@ -1009,8 +1029,8 @@ body {
 }
 .prodotti-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  gap: 3.5rem;
   margin-top: 4rem;
 }
 /*STICKY NAVIGATION*/
@@ -1020,7 +1040,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  height: 10rem;
+  height: 8rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   background-color: rgb(255 255 255 / 60%);
   backdrop-filter: blur(10px);
@@ -1243,7 +1263,7 @@ body {
   }
   .pricing-container {
     display: grid;
-    max-width: 370px;
+    max-width: 350px;
   }
 
   @keyframes slideInFromRight {
@@ -1259,11 +1279,12 @@ body {
 }
 
 @media (max-width: 768px) {
+
   html {
     font-size: 50%;
   }
   .header {
-    height: 14rem;
+    height: 8rem;
     padding: 0 2.4rem;
   }
   .logo {
@@ -1283,8 +1304,15 @@ body {
     gap: 4rem;
   }
   .hero-description {
-    font-size: 1.6rem;
+    font-size: 2.1rem;
   }
+  .dati-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+}
   .btn {
     font-size: 1.4rem;
     padding: 1.2rem 2.4rem;
@@ -1318,6 +1346,13 @@ body {
     margin-bottom: 3rem;
     padding: 12rem 0;
   }
+  .dati-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
   .feature img {
     height: 100px;
     width: 100px;
@@ -1326,7 +1361,7 @@ body {
     padding: 3rem 2rem;
   }
   .contact-form-box {
-    padding: 3rem 2rem;
+    padding: 5rem 4rem;
   }
   .grid--footer {
     grid-template-columns: 1fr;
@@ -1430,7 +1465,7 @@ body {
     font-size: 3.2rem;
   }
   .event-card::before {
-    right: 22rem;
+    right: 20rem;
     bottom: -2px;
     padding: 0.3rem 3rem;
   }

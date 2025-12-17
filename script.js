@@ -25,14 +25,14 @@ if (sectionHeroEl) {
   const obs = new IntersectionObserver(
     function (entries) {
       const ent = entries[0];
-      console.log("IsIntersecting:", ent.isIntersecting);
+
 
       if (!ent.isIntersecting) {
         document.body.classList.add("sticky");
-        console.log("Added sticky class");
+
       } else {
         document.body.classList.remove("sticky");
-        console.log("Removed sticky class");
+
       }
     },
     {
