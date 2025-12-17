@@ -41,11 +41,9 @@ if (sectionHeroEl) {
       rootMargin: "-80px",
     }
   );
-  
+
   obs.observe(sectionHeroEl);
 }
-
-
 
 // ====================================
 // MOBILE NAVIGATION
@@ -67,14 +65,12 @@ if (btnNav && header) {
 }
 
 // Chiudi cliccando sui link
-document.querySelectorAll(".main-nav-link").forEach(link => {
+document.querySelectorAll(".main-nav-link").forEach((link) => {
   link.addEventListener("click", (e) => {
     const href = link.getAttribute("href");
 
     // se è un anchor interno (#)
-    if (href && href.startsWith("#")) {
-      e.preventDefault();
-
+    if (href && href.startsWith("#") && !link.classList.contains("nav-cta")) {
       // chiudi menu
       header.classList.remove("nav-open");
       body.style.overflow = "auto";
@@ -82,13 +78,12 @@ document.querySelectorAll(".main-nav-link").forEach(link => {
       // aspetta un frame, poi scrolla
       setTimeout(() => {
         document.querySelector(href)?.scrollIntoView({
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }, 300);
     }
   });
 });
-
 
 // Chiudi cliccando sull'overlay
 if (navOverlay && header) {
@@ -106,8 +101,16 @@ const modal = document.getElementById("demoModal");
 const closeBtn = document.querySelector(".close-btn");
 
 if (openModalBtn && modal) {
-  openModalBtn.addEventListener("click", () => {
-    modal.style.display = "block";
+  openModalBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    header.classList.remove("nav-open");
+    body.style.overflow = "auto";
+
+    setTimeout(() => {
+      modal.style.display = "block";
+      body.style.overflow = "hidden";
+    }, 200);
   });
 }
 
@@ -125,13 +128,12 @@ if (modal) {
   });
 }
 
-
 //cambio frase nel titolo
 const phrases = [
   "Veloce e intuitivo",
   "Sempre a norma fiscale",
   "Perfetto per negozi e ristoranti",
-  "Assistenza rapida e dedicata"
+  "Assistenza rapida e dedicata",
 ];
 
 const heroDynamic = document.getElementById("heroDynamic");
@@ -146,25 +148,24 @@ if (heroDynamic) {
     setTimeout(() => {
       index = (index + 1) % phrases.length;
       heroDynamic.textContent = phrases[index];
-      heroDynamic.style.color = "#FAEAB1"
+      heroDynamic.style.color = "#FAEAB1";
       heroDynamic.style.opacity = 1;
     }, 400);
   }, 3500);
 }
 
-
-//smooth scrolling 
+//smooth scrolling
 // Aggiungi al tuo script.js
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       const offset = 100; // Offset per header sticky
       const targetPosition = target.offsetTop - offset;
       window.scrollTo({
         top: targetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   });
@@ -174,20 +175,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Animazioni quando elementi entrano nel viewport
 const observerOptions = {
   threshold: 0.1,
-  rootMargin: '0px 0px -100px 0px'
+  rootMargin: "0px 0px -100px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in-visible');
+      entry.target.classList.add("fade-in-visible");
     }
   });
 }, observerOptions);
 
 // Applica a elementi che vuoi animare
-document.querySelectorAll('.feature, .pricing-card, .solution-item').forEach(el => {
-  el.classList.add('fade-in-hidden');
-  observer.observe(el);
-});
-
+document
+  .querySelectorAll(".feature, .pricing-card, .solution-item")
+  .forEach((el) => {
+    el.classList.add("fade-in-hidden");
+    observer.observe(el);
+  });
