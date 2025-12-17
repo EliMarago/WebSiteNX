@@ -52,45 +52,53 @@ const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
 const navOverlay = document.querySelector(".nav-overlay");
 const body = document.body;
+const html = document.documentElement;
+
+// Salva la posizione dello scroll
+let scrollPosition = 0;
 
 if (btnNav && header) {
   btnNav.addEventListener("click", () => {
-    header.classList.toggle("nav-open");
-    if (header.classList.contains("nav-open")) {
-      body.style.overflow = "hidden";
+    const isOpen = header.classList.contains("nav-open");
+    
+    if (!isOpen) {
+      // APRI MENU
+      scrollPosition = window.pageYOffset;
+      header.classList.add("nav-open");
+      body.classList.add("nav-open");
+      html.classList.add("nav-open");
+      body.style.top = `-${scrollPosition}px`;
     } else {
-      body.style.overflow = "auto";
+      // CHIUDI MENU
+      header.classList.remove("nav-open");
+      body.classList.remove("nav-open");
+      html.classList.remove("nav-open");
+      body.style.top = '';
+      window.scrollTo(0, scrollPosition);
     }
   });
 }
 
-// Chiudi cliccando sui link
-document.querySelectorAll(".main-nav-link").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    const href = link.getAttribute("href");
+// Funzione per chiudere il menu
+function closeMenu() {
+  if (header && header.classList.contains("nav-open")) {
+    header.classList.remove("nav-open");
+    body.classList.remove("nav-open");
+    html.classList.remove("nav-open");
+    body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+  }
+}
 
-    // se è un anchor interno (#)
-    if (href && href.startsWith("#") && !link.classList.contains("nav-cta")) {
-      // chiudi menu
-      header.classList.remove("nav-open");
-      body.style.overflow = "auto";
-
-      // aspetta un frame, poi scrolla
-      setTimeout(() => {
-        document.querySelector(href)?.scrollIntoView({
-          behavior: "smooth",
-        });
-      }, 300);
-    }
-  });
+// Chiudi menu cliccando sui link
+const mainNavLinks = document.querySelectorAll(".main-nav-link");
+mainNavLinks.forEach(link => {
+  link.addEventListener("click", closeMenu);
 });
 
-// Chiudi cliccando sull'overlay
-if (navOverlay && header) {
-  navOverlay.addEventListener("click", () => {
-    header.classList.remove("nav-open");
-    body.style.overflow = "auto";
-  });
+// Chiudi menu cliccando sull'overlay
+if (navOverlay) {
+  navOverlay.addEventListener("click", closeMenu);
 }
 
 // ====================================

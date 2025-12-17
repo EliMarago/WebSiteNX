@@ -9,9 +9,16 @@
 
 html,
 body {
-  font-size: 45.5%;
+  font-size: 55.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+body.nav-open,
+html.nav-open {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 body {
@@ -97,7 +104,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-white);
-  height: 11.5rem;
+  height: 12.5rem;
   padding: 0 4.8rem;
   position: relative; /* Torna a relative */
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -1194,6 +1201,7 @@ body {
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
     z-index: 1000;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll su iOS */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1265,6 +1273,13 @@ body {
   .pricing-container {
     display: grid;
     max-width: 350px;
+  }
+  .header.nav-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1002;
   }
 
   @keyframes slideInFromRight {
