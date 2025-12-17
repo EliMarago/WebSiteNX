@@ -52,30 +52,43 @@ const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
 const navOverlay = document.querySelector(".nav-overlay");
 const body = document.body;
+const html = document.documentElement;
 
+// Salva la posizione dello scroll
 let scrollPosition = 0;
 
-btnNav.addEventListener("click", () => {
-  const isOpen = header.classList.contains("nav-open");
-
-  if (!isOpen) {
-    // APRI
-    scrollPosition = window.scrollY;
-    header.classList.add("nav-open");
-    body.classList.add("nav-open");
-    body.style.top = `-${scrollPosition}px`;
-  } else {
-    closeMenu();
-  }
-});
-
-function closeMenu() {
-  header.classList.remove("nav-open");
-  body.classList.remove("nav-open");
-  body.style.top = "";
-  window.scrollTo(0, scrollPosition);
+if (btnNav && header) {
+  btnNav.addEventListener("click", () => {
+    const isOpen = header.classList.contains("nav-open");
+    
+    if (!isOpen) {
+      // APRI MENU
+      scrollPosition = window.pageYOffset;
+      header.classList.add("nav-open");
+      body.classList.add("nav-open");
+      html.classList.add("nav-open");
+      body.style.top = `-${scrollPosition}px`;
+    } else {
+      // CHIUDI MENU
+      header.classList.remove("nav-open");
+      document.body.classList.remove("nav-open");
+      html.classList.remove("nav-open");
+      body.style.top = '';
+      window.scrollTo(0, scrollPosition);
+    }
+  });
 }
 
+// Funzione per chiudere il menu
+function closeMenu() {
+  if (header && header.classList.contains("nav-open")) {
+    header.classList.remove("nav-open");
+    body.classList.remove("nav-open");
+    html.classList.remove("nav-open");
+    body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+  }
+}
 
 // Chiudi menu cliccando sui link
 const mainNavLinks = document.querySelectorAll(".main-nav-link");
@@ -188,3 +201,24 @@ document
     el.classList.add("fade-in-hidden");
     observer.observe(el);
   });
+
+
+  const slides = document.querySelectorAll(".hero-slide");
+  let currentSlide = 0;
+  const slideInterval = 5000; // 5 secondi per slide
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  setInterval(nextSlide, slideInterval);
+
+  // Inizializza la prima slide
+  showSlide(currentSlide);
