@@ -23,34 +23,13 @@
     
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="index.html">Home</a></li>
-        <li><a class="main-nav-link nav-cta" id="openModalBtn" href="#contatti">Richiedi demo</a></li>
+        <li><a class="main-nav-link" href="prodotti.html">Prodotti</a></li>
+        <li><a class="main-nav-link" href="#soluzioni">Soluzioni</a></li>
+        <li><a class="main-nav-link" href="#vantaggi">Vantaggi</a></li>
+        <li><a class="main-nav-link" href="#contatti">Contatti</a></li>
+        <li><a class="main-nav-link nav-cta" href="#contatti">Richiedi demo</a></li>
       </ul>
 
-      <div class="modal" id="demoModal">
-        <div class="modal-content">
-          <span class="close-btn">&times;</span>
-          <h2>Richiedi una demo</h2>
-          <p>Scrivici per saperne di più!</p>
-      <div class="contact-form-box">
-        <form class="contact-form">
-          <div>
-            <label for="name">Nome</label>
-            <input id="name" type="text" required placeholder="Il tuo nome" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input id="email" type="email" required placeholder="nome@email.com" />
-          </div>
-          <div>
-            <label for="message">Messaggio</label>
-            <textarea id="message" rows="5" required placeholder="Scrivi il tuo messaggio..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--full-enter">Invia messaggio</button>
-        </form>
-      </div>
-    </div>
-      </div>
       <!-- Sezione Social nel menu mobile -->
       <div class="mobile-nav-footer">
         <p class="mobile-nav-title">Seguici</p>
@@ -105,52 +84,13 @@
       </div>
     </button>
   </header>
-  
-  <div class="nav-overlay"></div>
 
-  <div class="container-event">
-    <div class="event-card">
-      <img src="img/Google Classroom Header American Sign Language.gif" class="event-img" alt="Evento">
-  
+    <section class="section-featured" id="suite">
+    <div class="container">
+      <h2 class="heading-secondary">Informativa Privacy</h2>
+      <p class="subheading">Privacy...</p>
     </div>
-  </div>
-
-    <section class="section-prodotti" id="prodotti">
-      <div class="container">
-        <h2 class="heading-secondary">I nostri prodotti</h2>
-        <p class="subheading">Una suite completa per la gestione del tuo business.</p>
-    
-        <div class="prodotti-grid">
-          <div class="prodotto-card">
-            <img src="img/cassa-Nempos.png" alt="Casse Automatiche">
-            <h3 class="heading-tertiary">Casse </h3>
-            <p>Gestione sicura dei pagamenti in denaro contante nel mondo Retail & Food.</p>
-            <button class="btn btn--full" id="openModalBtn1">Richiedi demo</button>
-          </div>
-    
-          <div class="prodotto-card">
-            <img src="img/cassa-Nempos.png" alt="Software Gestionali">
-            <h3 class="heading-tertiary">Cassa posTouch</h3>
-            <p>Il Software per l'integrazione delle nostre soluzioni nel punto vendita.</p>
-            <button class="btn btn--full" id="openModalBtn2">Richiedi demo</button>
-          </div>
-    
-          <div class="prodotto-card">
-            <img src="img/Kiosk Nero Eco Floor.png" alt="NemPOS BackOffice">
-            <h3 class="heading-tertiary">Kiosk Eco Floor</h3>
-            <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
-            <button class="btn btn--full" id="openModalBtn3">Richiedi demo</button>
-          </div>
-                    <div class="prodotto-card">
-            <img src="img/kiosk_slim.png" alt="NemPOS BackOffice">
-            <h3 class="heading-tertiary">Kiosk Slim</h3>
-            <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
-            <button class="btn btn--full" id="openModalBtn3">Richiedi demo</button>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+  
 
   <footer class="footer">
     <div class="container grid grid--footer">
@@ -159,11 +99,10 @@
           <img src="img/logoFooter_White.png" alt="NemPOS logo" />
         </a>
       </div>
-
       
       <div class="address-col">
-        <p style="font-weight: 600; font-size: 1.6rem; margin-bottom: 1.6rem;">Contatti</p>
-        <address style="font-style: normal; font-size: 1.4rem; line-height: 1.8;">
+        <p style="font-weight: 600; font-size: 1.9rem; margin-bottom: 1.6rem;">Contatti</p>
+        <address style="font-style: normal; font-size: 1.8rem; line-height: 2;">
           <p>Via Zappiano, 1C<br>41012, Carpi (MO)</p>
           <p><a href="tel:+39020000000">+39 059 59 666 59</a><br />
             <a href="mailto:info@nempos.com">info@nemesix.com</a></p>
@@ -184,9 +123,10 @@
                 </svg>
               </a>
               <a href="https://it.linkedin.com/in/nemesixsrlsistemidicassa?trk=public_post_follow-view-profile" target="_blank" aria-label="Linkedin">
-                <svg xmlns="http://www.w3.org/2000/svg"  class="ionicon s-ion-icon"  viewBox="0 0 666 680"><path fill="#ffffff" d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg"  class="ionicon s-ion-icon"  viewBox="0 0 666 680"><path fill="currentColor" d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/></svg>
+
               </a>
-                <a href="mailto:info@nempos.com"
+              <a href="mailto:info@nempos.com"
               aria-label="Email"
               class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24">
@@ -199,6 +139,7 @@
                     </path>
                 </g>
             </svg>
+           
            </a>
             </div>
         </div>
@@ -210,7 +151,7 @@
       
       
       <div class="nav-col">
-        <p style="font-weight: 600; font-size: 1.6rem; margin-bottom: 1.6rem;">Link utili</p>
+        <p style="font-weight: 600; font-size: 1.9rem; margin-bottom: 1.7rem;">Link utili</p>
         <ul class="footer-nav">
           <li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
           <li><a class="footer-link" href="#">Termini e condizioni</a></li>
