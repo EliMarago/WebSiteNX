@@ -222,3 +222,23 @@ document
 
   // Inizializza la prima slide
   showSlide(currentSlide);
+
+
+
+const text = "Il punto cassa più smart per la tua attività";
+const target = document.getElementById("typing-text");
+
+let i = 0;
+function type(){
+  if(i<text.length){
+    target.textContent += text.charAt(i)
+    i++
+    setTimeout(type,90)
+  }else{
+    target.classList.remove("blinking")
+    target.style.borderRight = "none"
+  }
+}
+target.textContent = ""
+target.classList.add("blinking")  
+type();

@@ -9,7 +9,7 @@
 
 html,
 body {
-  font-size: 55.5%;
+  font-size: 50.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -99,7 +99,7 @@ body {
   background-color: var(--color-white);
   height: 12.5rem;
   padding: 0 4.8rem;
-  position: relative; /* Torna a relative */
+  position: relative; 
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: all 0.3s ease;
 }
@@ -137,8 +137,8 @@ body.nav-open {
   padding: 1rem;
   border-radius: 8px;
   transition: all 0.3s ease;
-  width: 34px;
-  height: 34px;
+   width: 40px;
+  height: 40px;
 }
 
 .btn-mobile-nav:hover {
@@ -301,6 +301,44 @@ body.nav-open {
 .nav-cta:active {
   transform: scale(0.98);
 }
+/*
+HERO secondary
+*/
+  .section-cta {
+    background: linear-gradient(354deg, #002f5d8f 0%, #001f3d 100%);    color: #e9f4ff;
+    padding: 2rem 0;
+    border-radius: 2px;
+    margin-bottom: 0;
+    padding: 2rem 0 12rem 0; 
+
+  }
+  .section-cta img{
+    width: 420px;
+    left: 60%;
+    right: 20%;
+    margin-top: -10px;
+  }
+    .cta-text-box .heading-secondary {
+    padding: 2rem;
+    color: #80bfffd1;
+    text-align: center;
+  }
+  
+  .cta-text {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem 0;
+    text-align: center;
+  }
+    .cta-text-box .heading-secondary {
+    padding: 2rem;
+    color: #80bfffd1;
+    text-align: center;
+  }
+  
+  .cta-img-box {
+    height: 100%;
+    border-radius: 1.2rem;
+  }
 /* ===========================
    HERO
 =========================== */
@@ -312,6 +350,10 @@ body.nav-open {
   background: linear-gradient(180deg, #002f5d 0%, #001f3d 100%);
   color: var(--color-white);
   padding: 8rem 0 12rem 0; 
+}
+
+.btn--full.margin.secondary{
+  background-color: var(--color-primary);
 }
 .section-hero::before {
   content: "";
@@ -326,7 +368,7 @@ body.nav-open {
 .section-featured,
 .section-vantaggi,
 .section-how {
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 .section-how {
   padding-bottom: 6rem;
@@ -343,7 +385,7 @@ body.nav-open {
 
 .hero-description {
   font-size: 1.8rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 4.2rem;
   color: #e9f4ff;
 }
 .hero-description span{
@@ -511,7 +553,6 @@ body.nav-open {
 }
 .event-card::before {
   content: "NUOVO EVENTO";
-  position: absolute;
   bottom: 7px;
  right: 350px;
   background: linear-gradient(
@@ -526,6 +567,7 @@ body.nav-open {
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   animation: badgePulse 2s ease-in-out infinite;
+  position: absolute;
 }
 
 .event-date {
@@ -558,7 +600,7 @@ body.nav-open {
 
 /*SEZIONE SOLUZIONI*/
 .solution-item {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .step-number {
   font-size: 5rem;
@@ -597,6 +639,11 @@ body.nav-open {
   width: 6rem;
   height: 6rem;
   margin-bottom: 1.6rem;
+  color: var(--color-primary);
+}
+.feature-icon.location{
+  position: relative;
+  left: 48%;
   color: var(--color-primary);
 }
 .icon-inner {
@@ -668,8 +715,8 @@ body.nav-open {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 10px;
-  padding: 4px; /* Spessore del bordo */
+  border-radius: 3px;
+  padding: 2px; /* Spessore del bordo */
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -731,6 +778,7 @@ body.nav-open {
 .section-contatti {
   background-color: var(--color-grey-light);
   padding: 3rem 0;
+  border-bottom: 0.8rem solid rgb(159, 159, 159);
 }
 .contact-text-box {
   padding-right: 4.8rem;
@@ -819,6 +867,8 @@ body.nav-open {
   padding: 7rem 0;
   font-size: 1.4rem;
   border-top: 1rem solid rgb(159, 159, 159);
+   margin-top: 6rem;
+
 }
 
 .footer a {
@@ -992,9 +1042,13 @@ body.nav-open {
   border-radius: 2rem;
   padding: 2.5rem 2rem;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgb(0 0 0 / 9%);
   transition: transform 0.4s, box-shadow 0.4s;
 
+}
+.img-container img{
+  width: 100%;
+  border-radius: 1.2rem;
 }
 
 .prodotto-card:hover {
@@ -1003,9 +1057,9 @@ body.nav-open {
 }
 
 .prodotto-card img {
-  width: 120px;
-  height: 200px;
-  margin-bottom: 5.5rem;
+    width: auto;
+    height: 23rem;
+    margin-bottom: 8rem;
 }
 
 .prodotto-card h3 {
@@ -1029,6 +1083,7 @@ body.nav-open {
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  left: 0rem;
 }
 
 .prodotto-card button:hover {
@@ -1050,7 +1105,7 @@ body.nav-open {
   width: 100%;
   height: 8rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  background-color: rgba(215, 215, 215, 0.37);
+  background-color: rgba(235, 235, 235, 0.867);
   backdrop-filter: blur(10px);
   z-index: 1000;
   animation: slideDown 0.3s ease-out;
@@ -1270,7 +1325,10 @@ body.nav-open {
   }
   .pricing-container {
     display: grid;
-    max-width: 350px;
+    max-width: 600px;
+  }
+    .prodotto-card button {
+        left: 0rem;
   }
 
   @keyframes slideInFromRight {
@@ -1282,6 +1340,9 @@ body.nav-open {
       opacity: 1;
       transform: translateX(0);
     }
+  }
+  .prodotto-card button{
+    left: 5rem;
   }
 }
 
@@ -1304,14 +1365,15 @@ body.nav-open {
     font-size: 2.4rem;
   }
   .section-hero {
-    padding: 6rem 4rem;
+    padding: 2rem 3rem;
   }
   .hero {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
   .hero-description {
-    font-size: 2.1rem;
+    font-size: 2rem;
+    margin-top: 3rem;
   }
   .dati-image img {
   width: 100%;
@@ -1331,17 +1393,18 @@ body.nav-open {
   .grid {
     gap: 4rem;
   }
-  .grid--2-cols,
-  .grid--3-cols,
-  .grid--4-cols {
+  .grid--2-cols
+ {
     grid-template-columns: 1fr;
   }
+
   .event-card {
     width: 100%;
     max-width: none;
     margin: 0 auto 3rem auto;
     padding: 1.6rem;
     border-radius: 0;
+    
   }
   .container {
     width: 92%;
@@ -1431,6 +1494,23 @@ body.nav-open {
   .section-featured#suite {
     grid-template-columns: repeat(2,1fr);
   }
+  .contact-info{
+    font-size: 1.2rem;
+  }
+  .feature-icon.location{
+  position: relative;
+  left: 44%;
+  color: var(--color-primary);
+}
+  .contact-info{
+    font-size: 1.5rem;
+  }
+    .section-cta img{
+    width: 220px;
+    margin-left: 20%;
+    right: 40%;
+    margin-top: -10px;
+  }
 }
 .header.nav-open .main-nav-list li {
   animation: slideInFromRight 0.4s ease forwards;
@@ -1468,16 +1548,16 @@ body.nav-open {
     width: 90%;
   }
   .event-card {
-    width: 100%;
-    padding: 1.2rem;
+    width: 105%;
+    padding: 3.2rem;
   }
   .hero-title {
     font-size: 3.2rem;
   }
   .event-card::before {
-    right: 20rem;
-    bottom: -2px;
-    padding: 0.3rem 3rem;
+        right: 23rem;
+        bottom: 9px;
+        padding: 0.3rem 3rem;
   }
   .hero-dynamic {
     font-size: 2rem;
@@ -1488,6 +1568,12 @@ body.nav-open {
   .modal-content{
         width: 349px;
 
+  }
+    .contact-info{
+    font-size: 1.8rem;
+  }
+   .prodotto-card button{
+    left: 5rem;
   }
 }
 
@@ -1562,3 +1648,19 @@ body.nav-open {
   transform: translateY(0);
 }
 
+/*ANIMATION TEXT */
+  .blinking {
+    animation: blink 0.2s step-end infinite;
+  }
+
+    @keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: rgba(255, 255, 255, 0.75); }
+  }
+
+@media(max-width: 48em){
+  .prodotto-card button{
+  left: 12rem;
+  }
+
+}

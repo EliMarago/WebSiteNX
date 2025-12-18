@@ -50,7 +50,7 @@
               <path d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/>
             </svg>
           </a>
-          <a href="mailto:info@nemesix.com" aria-label="Email" class="mobile-social-link">
+          <a href="mailto:info@nemesix.it" aria-label="Email" class="mobile-social-link">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
@@ -65,12 +65,12 @@
             </svg>
             +39 059 59 666 59
           </a>
-          <a href="mailto:info@nemesix.com" class="mobile-contact-link">
+          <a href="mailto:info@nemesix.it" class="mobile-contact-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            info@nemesix.com
+            info@nemesix.it
           </a>
         </div>
       </div>
@@ -98,13 +98,14 @@
   <section class="section-hero">
     <div class="container hero">
       <div class="hero-text-box">
-        <h1 class="heading-primary hero-title">
+        <h1 class="heading-primary hero-title" id="typing-text">
           Il punto cassa più smart per la tua attività
-          <span id="heroDynamic" class="hero-dynamic"></span>
-        </h1>       
+        </h1>   
+         <span id="heroDynamic" class="hero-dynamic"></span>    
          <p class="hero-description">
           Con NemPOS Suite gestisci vendite, magazzino, personale e analisi in un unico software cloud, veloce e intuitivo.
         </p>
+
         <a href="#contatti" class="btn btn--full margin">Richiedi una demo</a>
         <a href="#prodotti" class="btn btn--outline">Scopri di più ↓</a>
       </div>
@@ -192,9 +193,6 @@
           <p class="subheading">
             Per questo motivo, durante la realizzazione di <span class="primary-text">NemPOS</span>  Suite, l'architettura della base dati è in cima alla lista delle priorità.
           </p>
-          <div class="cta">
-            <a href="#vantaggi" class="btn btn--full">Scopri di più</a>
-          </div>
         </div>
         <div class="dati-image">
           <img src="img/BlueIcons.png" alt="Dashboard di analisi dati" />
@@ -343,7 +341,7 @@
         </div>
       </div>
       
-      <div class="pricing-card popular">
+      <div class="pricing-card">
         <h3>Plus</h3>
          <h4 style="letter-spacing: 0.4px;">Tutto ciò che include <span style="font-weight: bold; color: var(--color-primary); background-color: #0147a9e2; text-decoration: underline; color: #fff; padding: 3px; border-radius: 5px;">STARTER</span> in più</h4>
         <p class="subheading">Assistenza Lun-Ven 9:00-18:00</p>
@@ -381,6 +379,20 @@
     </div>
   </section>
   
+    <section class="section-cta" id="contatti">
+      <div class="container grid grid--2-cols grid--center-v">
+        <div class="cta-text-box">
+          <h2 class="heading-secondary">Richiedi una demo</h2>
+          <p class="cta-text">
+            Scopri come NemPOS può semplificare la gestione della tua attività e farti risparmiare tempo ogni giorno.
+          </p>
+         </div>
+        <div class="cta-img-box" role="img" aria-label="Immagine contatto NemPOS">
+          <img src="img/richiedi-demo.png" alt="Richiedi demo">
+        </div>
+      </div>
+    </section>
+  
 <div class="wave-container">
   <svg viewBox="0 0 1000 200" preserveAspectRatio="none" style="width: 100%; height: 100%;">
     <path
@@ -410,7 +422,7 @@
 
 
       <ul class="contact-info">
-        <li><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:info@nemesix.com">info@nemesix.com</a></li>
+        <li><i class="fa-solid fa-envelope"></i><strong>Email:</strong> <a href="mailto:info@nemesix.it">info@nemesix.it</a></li>
         <li><i class="fa-solid fa-phone"></i><strong>Telefono:</strong> <a href="tel:+390595966659"> +39 059 59 666 59</a></li>
         <li><i class="fa-solid fa-location-dot"></i><strong>Sede:</strong>  Via Zappiano, 1C
           41012, Carpi (MO)</li>
@@ -439,6 +451,7 @@
 
   <section class="section-mappa" id="maps">
     <div class="container center-text">
+      <ion-icon name="location-outline" class="feature-icon location"></ion-icon>
       <h2 class="heading-secondary">Dove siamo</h2>
       <p class="subtitle">Vieni a trovarci nella nostra sede.</p>
   
@@ -469,7 +482,7 @@
         <address style="font-style: normal; font-size: 1.8rem; line-height: 2;">
           <p>Via Zappiano, 1C<br>41012, Carpi (MO)</p>
           <p><a href="tel:+39020000000">+39 059 59 666 59</a><br />
-            <a href="mailto:info@nempos.com">info@nemesix.com</a></p>
+            <a href="mailto:info@nemesix.it">info@nemesix.it</a></p>
           <p>P.IVA \ C.F. 03099200366
           </p>
           <div class="icons-container">
@@ -490,7 +503,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg"  class="ionicon s-ion-icon"  viewBox="0 0 666 680"><path fill="currentColor" d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/></svg>
 
               </a>
-              <a href="mailto:info@nempos.com"
+              <a href="mailto:info@nemesix.it"
               aria-label="Email"
               class="social-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24">
