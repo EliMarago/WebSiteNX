@@ -102,6 +102,7 @@ if (heroDynamic) {
     setTimeout(() => {
       index = (index + 1) % phrases.length;
       heroDynamic.textContent = phrases[index];
+      heroDynamic.style.color = "#F9E7B2"
       heroDynamic.style.opacity = 1;
     }, 400);
   }, 3500);
@@ -198,3 +199,25 @@ if (typingTarget) {
 
   type();
 }
+
+
+window.addEventListener('load', () => {
+
+  const cards = document.querySelectorAll('.prodotto-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', e => {
+
+      // evita che il bottone richiuda la card
+      if (e.target.closest('button')) return;
+
+      // chiude le altre
+      cards.forEach(c => {
+        if (c !== card) c.classList.remove('is-flipped');
+      });
+
+      card.classList.toggle('is-flipped');
+    });
+  });
+
+});

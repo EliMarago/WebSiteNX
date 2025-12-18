@@ -58,7 +58,7 @@ body {
 
 /* TIPOGRAFIA */
 .heading-primary {
-  font-size: 4.4rem;
+  font-size: 6rem;
   color: #d6eaff;
   font-weight: 700;
   line-height: 1.2;
@@ -1061,7 +1061,7 @@ HERO secondary
 }
 .prodotti-grid {
   display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   gap: 3.5rem;
   margin-top: 4rem;
 }

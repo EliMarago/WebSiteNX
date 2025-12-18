@@ -1,0 +1,63 @@
+/* ==========================
+   FLIP CARD ON CLICK
+========================== */
+.prodotto-card { overflow: visible; }
+
+
+  .flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,.12);
+  }
+  
+  /* FRONT */
+  .flip-front {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .flip-front img {
+    max-width: 220px;
+  }
+  
+  /* BACK */
+  .flip-back {
+    background: linear-gradient(135deg, #0b2c4d, #123c6a);
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  
+  .flip-hint {
+    font-size: 1.2rem;
+    opacity: .6;
+  }
+  
+  /* ==========================
+   GRID PRODOTTI - 5 CARD
+========================== */
+
+  
+  /* Desktop medio */
+  @media (max-width: 1400px) {
+    .prodotti-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .prodotti-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
