@@ -1,39 +1,23 @@
-// Logo click - CONTROLLA che esista prima
-const logoEl = document.getElementById("logo");
-if (logoEl) {
-  logoEl.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = window.location.origin + "/index.html";
-  });
+/* ===============================
+   LOGO CLICK
+================================ */
+function goHome(e) {
+  e.preventDefault();
+  window.location.href = `${window.location.origin}/index.html`;
 }
 
-// In alternativa, usa la classe che hai effettivamente nell'HTML
-const logoBox = document.querySelector(".logo-box");
-if (logoBox) {
-  logoBox.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = window.location.origin + "/index.html";
-  });
-}
+document.getElementById("logo")?.addEventListener("click", goHome);
+document.querySelector(".logo-box")?.addEventListener("click", goHome);
 
-// ====================================
-// STICKY NAVIGATION con IntersectionObserver
-// ====================================
-const sectionHeroEl = document.querySelector(".section-hero");
+/* ===============================
+   STICKY HEADER
+================================ */
+const heroSection = document.querySelector(".section-hero");
 
-if (sectionHeroEl) {
-  const obs = new IntersectionObserver(
-    function (entries) {
-      const ent = entries[0];
-
-
-      if (!ent.isIntersecting) {
-        document.body.classList.add("sticky");
-
-      } else {
-        document.body.classList.remove("sticky");
-
-      }
+if (heroSection) {
+  const stickyObserver = new IntersectionObserver(
+    ([entry]) => {
+      document.body.classList.toggle("sticky", !entry.isIntersecting);
     },
     {
       root: null,
@@ -42,101 +26,63 @@ if (sectionHeroEl) {
     }
   );
 
-  obs.observe(sectionHeroEl);
+  stickyObserver.observe(heroSection);
 }
 
-// ====================================
-// MOBILE NAVIGATION
-// ====================================
+/* ===============================
+   MOBILE NAVIGATION (SAFE)
+================================ */
 const btnNav = document.querySelector(".btn-mobile-nav");
 const header = document.querySelector(".header");
-const navOverlay = document.querySelector(".nav-overlay");
 const body = document.body;
-const html = document.documentElement;
+const navOverlay = document.querySelector(".nav-overlay");
 
-// Salva la posizione dello scroll
-let scrollPosition = 0;
-
-if (btnNav && header) {
-  btnNav.addEventListener("click", () => {
-    const isOpen = header.classList.contains("nav-open");
-    
-    if (!isOpen) {
-      // APRI MENU
-      scrollPosition = window.pageYOffset;
-      header.classList.add("nav-open");
-      body.classList.add("nav-open");
-      html.classList.add("nav-open");
-      body.style.top = `-${scrollPosition}px`;
-    } else {
-      // CHIUDI MENU
-      header.classList.remove("nav-open");
-      document.body.classList.remove("nav-open");
-      html.classList.remove("nav-open");
-      body.style.top = '';
-      window.scrollTo(0, scrollPosition);
-    }
-  });
+function toggleMenu() {
+  header.classList.toggle("nav-open");
+  body.classList.toggle("nav-open");
 }
 
-// Funzione per chiudere il menu
 function closeMenu() {
-  if (header && header.classList.contains("nav-open")) {
-    header.classList.remove("nav-open");
-    body.classList.remove("nav-open");
-    html.classList.remove("nav-open");
-    body.style.top = '';
-    window.scrollTo(0, scrollPosition);
-  }
+  header.classList.remove("nav-open");
+  body.classList.remove("nav-open");
 }
 
-// Chiudi menu cliccando sui link
-const mainNavLinks = document.querySelectorAll(".main-nav-link");
-mainNavLinks.forEach(link => {
+btnNav?.addEventListener("click", toggleMenu);
+navOverlay?.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".main-nav-link").forEach(link => {
   link.addEventListener("click", closeMenu);
 });
 
-// Chiudi menu cliccando sull'overlay
-if (navOverlay) {
-  navOverlay.addEventListener("click", closeMenu);
-}
-
-// ====================================
-// MODAL
-// ====================================
+/* ===============================
+   MODAL
+================================ */
 const openModalBtn = document.getElementById("openModalBtn");
 const modal = document.getElementById("demoModal");
 const closeBtn = document.querySelector(".close-btn");
 
-if (openModalBtn && modal) {
-  openModalBtn.addEventListener("click", (e) => {
-    e.preventDefault();
+openModalBtn?.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeMenu();
+  modal.style.display = "block";
+  body.style.overflow = "hidden";
+});
 
-    header.classList.remove("nav-open");
-    body.style.overflow = "auto";
+closeBtn?.addEventListener("click", () => {
+  modal.style.display = "none";
+  body.style.overflow = "";
+});
 
-    setTimeout(() => {
-      modal.style.display = "block";
-      body.style.overflow = "hidden";
-    }, 200);
-  });
-}
-
-if (closeBtn && modal) {
-  closeBtn.addEventListener("click", () => {
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
     modal.style.display = "none";
-  });
-}
+    body.style.overflow = "";
+  }
+});
 
-if (modal) {
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-}
-
-//cambio frase nel titolo
+/* ===============================
+   HERO DYNAMIC TEXT
+================================ */
 const phrases = [
   "Veloce e intuitivo",
   "Sempre a norma fiscale",
@@ -156,89 +102,99 @@ if (heroDynamic) {
     setTimeout(() => {
       index = (index + 1) % phrases.length;
       heroDynamic.textContent = phrases[index];
-      heroDynamic.style.color = "#FAEAB1";
       heroDynamic.style.opacity = 1;
     }, 400);
   }, 3500);
 }
 
-//smooth scrolling
-// Aggiungi al tuo script.js
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
+/* ===============================
+   SMOOTH SCROLL (MOBILE SAFE)
+================================ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", e => {
+    const targetId = anchor.getAttribute("href");
+    const target = document.querySelector(targetId);
+
+    if (!target) return;
+
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      const offset = 100; // Offset per header sticky
-      const targetPosition = target.offsetTop - offset;
-      window.scrollTo({
-        top: targetPosition,
+    closeMenu();
+
+    setTimeout(() => {
+      target.scrollIntoView({
         behavior: "smooth",
+        block: "start",
       });
-    }
+    }, 150);
   });
 });
 
-//animazioni scroll
-// Animazioni quando elementi entrano nel viewport
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -100px 0px",
-};
+/* ===============================
+   SCROLL ANIMATIONS
+================================ */
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-visible");
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  }
+);
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-in-visible");
-    }
-  });
-}, observerOptions);
-
-// Applica a elementi che vuoi animare
 document
   .querySelectorAll(".feature, .pricing-card, .solution-item")
-  .forEach((el) => {
+  .forEach(el => {
     el.classList.add("fade-in-hidden");
     observer.observe(el);
   });
 
+/* ===============================
+   HERO SLIDER
+================================ */
+const slides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
 
-  const slides = document.querySelectorAll(".hero-slide");
-  let currentSlide = 0;
-  const slideInterval = 5000; // 5 secondi per slide
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }
-
-  setInterval(nextSlide, slideInterval);
-
-  // Inizializza la prima slide
-  showSlide(currentSlide);
-
-
-
-const text = "Il punto cassa più smart per la tua attività";
-const target = document.getElementById("typing-text");
-
-let i = 0;
-function type(){
-  if(i<text.length){
-    target.textContent += text.charAt(i)
-    i++
-    setTimeout(type,90)
-  }else{
-    target.classList.remove("blinking")
-    target.style.borderRight = "none"
-  }
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
 }
-target.textContent = ""
-target.classList.add("blinking")  
-type();
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+if (slides.length) {
+  showSlide(currentSlide);
+  setInterval(nextSlide, 5000);
+}
+
+/* ===============================
+   TYPING EFFECT
+================================ */
+const typingText = "Il punto cassa più smart per la tua attività";
+const typingTarget = document.getElementById("typing-text");
+
+if (typingTarget) {
+  let i = 0;
+  typingTarget.textContent = "";
+  typingTarget.classList.add("blinking");
+
+  function type() {
+    if (i < typingText.length) {
+      typingTarget.textContent += typingText.charAt(i++);
+      setTimeout(type, 90);
+    } else {
+      typingTarget.classList.remove("blinking");
+      typingTarget.style.borderRight = "none";
+    }
+  }
+
+  type();
+}

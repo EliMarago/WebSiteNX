@@ -6,7 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body.nav-open {
+  overflow: hidden;
+}
 html,
 body {
   font-size: 50.5%;
