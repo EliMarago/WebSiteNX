@@ -8,6 +8,8 @@
 }
 body.nav-open {
   overflow: hidden;
+  position: fixed; /* aggiunge questo */
+  width: 100%; /* e questo */
 }
 html,
 body {

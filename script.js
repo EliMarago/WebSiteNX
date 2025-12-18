@@ -221,3 +221,7 @@ window.addEventListener('load', () => {
   });
 
 });
+
+// Rimuove eventuali classi bloccanti rimaste
+document.body.classList.remove('nav-open');
+document.querySelector('.header')?.classList.remove('nav-open');
