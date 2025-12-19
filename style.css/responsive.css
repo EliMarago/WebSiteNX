@@ -312,7 +312,7 @@
       width: 120px;
     }
     .pricing-container{
-      width: 390px;
+      width: 290px;
     }
     .pricing-card {
       padding: 4rem 5rem;
@@ -386,11 +386,7 @@
     .contact-info{
       font-size: 1.2rem;
     }
-    .feature-icon.location{
-    position: relative;
-    left: 44%;
-    color: var(--color-primary);
-  }
+
     .contact-info{
       font-size: 1.5rem;
     }

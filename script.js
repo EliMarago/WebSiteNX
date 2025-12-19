@@ -40,19 +40,11 @@ const navOverlay = document.querySelector(".nav-overlay");
 function toggleMenu() {
   header.classList.toggle("nav-open");
   body.classList.toggle("nav-open");
-
-  // Blocca scroll quando il menu è aperto
-  if (header.classList.contains("nav-open")) {
-    body.style.overflow = "hidden";
-  } else {
-    body.style.overflow = "";
-  }
 }
 
 function closeMenu() {
   header.classList.remove("nav-open");
   body.classList.remove("nav-open");
-  body.style.overflow = ""; // ✅ riabilita scroll
 }
 
 btnNav?.addEventListener("click", toggleMenu);
@@ -161,6 +153,24 @@ document
     el.classList.add("fade-in-hidden");
     observer.observe(el);
   });
+const scrollObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        scrollObserver.unobserve(entry.target); // una sola volta
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+document
+  .querySelectorAll(".animate-on-scroll")
+  .forEach(el => scrollObserver.observe(el));
+
 
 /* ===============================
    HERO SLIDER
