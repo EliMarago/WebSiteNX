@@ -186,16 +186,14 @@ body {
 
 .nav-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  /* background-color: rgba(0,0,0,0.7); */
-  z-index: 900;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
   pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 900;
+  display: none; 
 }
 
 .header.nav-open .nav-overlay {
@@ -386,7 +384,7 @@ HERO secondary
 }
 
 .hero-description {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 4.2rem;
   color: #e9f4ff;
 }
@@ -410,10 +408,11 @@ HERO secondary
 
 .hero-dynamic {
   display: block;
-  margin-top: 1.2rem;
+  margin-top: 1.6rem;
+  margin-bottom: 1.3rem;
   font-size: 2.4rem;
   font-weight: 600;
-  color: var(--accent);
+  color: #F9E7B2  ;
   min-height: 3rem; /* evita salti */
   opacity: 1;
   transition: opacity 0.4s ease;
@@ -461,6 +460,10 @@ HERO secondary
 }
 .btn--full.margin {
   background-color: var(--color-accent);
+  font-size:2rem;
+}
+.btn--outline{
+  font-size: 2rem;
 }
 .btn--full:hover {
   background-color: var(--color-primary-light);
@@ -1150,20 +1153,12 @@ HERO secondary
 .header.nav-open .main-nav-list li {
   animation: slideInFromRight 0.4s ease forwards;
 }
-.nav-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none; /* 🔑 QUESTO RISOLVE */
-  transition: opacity .3s ease, visibility .3s ease;
-  z-index: 900;}
 
 .header.nav-open ~ .nav-overlay {
+  display: block; 
   opacity: 1;
   visibility: visible;
-   pointer-events: auto;
+  pointer-events: auto;
   backdrop-filter: blur(3px);
 }
 .main-nav-link:hover {
