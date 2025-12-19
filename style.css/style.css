@@ -1,6 +1,12 @@
 /* ===========================
    RESET E BASE
 =========================== */
+body.nav-open {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -230,7 +236,7 @@ body {
   text-decoration: none;
   color: var(--color-grey-dark);
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   transition: all 0.3s ease;
 }
 .main-nav-link:not(.nav-cta)::after {
@@ -541,6 +547,79 @@ HERO secondary
   justify-content: center;
   color: var(--color-primary);
 }
+/* ===========================
+  SOLUZIONI
+=========================== */
+/* SOLUZIONI CARDS */
+.soluzioni-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.soluzione-card {
+  background: white;
+  border-radius: 1.6rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.soluzione-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 56, 112, 0.15);
+}
+
+.soluzione-icon {
+  width: 8rem;
+  height: 8rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.soluzione-card:hover .soluzione-icon {
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+.soluzione-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-grey-dark);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .soluzioni-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .soluzioni-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .soluzione-card {
+    padding: 3rem 1.5rem;
+  }
+  
+  .soluzione-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .soluzione-title {
+    font-size: 1.7rem;
+  }
+}
+
 /* ===========================
    EVENT CARD
 =========================== */
@@ -1128,7 +1207,7 @@ HERO secondary
   left: 0;
   right: 0;
   width: 100%;
-  height: 8rem;
+  height: 10rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   background-color: rgba(235, 235, 235, 0.867);
   backdrop-filter: blur(10px);

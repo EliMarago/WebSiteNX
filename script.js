@@ -40,11 +40,19 @@ const navOverlay = document.querySelector(".nav-overlay");
 function toggleMenu() {
   header.classList.toggle("nav-open");
   body.classList.toggle("nav-open");
+
+  // Blocca scroll quando il menu è aperto
+  if (header.classList.contains("nav-open")) {
+    body.style.overflow = "hidden";
+  } else {
+    body.style.overflow = "";
+  }
 }
 
 function closeMenu() {
   header.classList.remove("nav-open");
   body.classList.remove("nav-open");
+  body.style.overflow = ""; // ✅ riabilita scroll
 }
 
 btnNav?.addEventListener("click", toggleMenu);
