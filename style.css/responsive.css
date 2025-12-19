@@ -98,6 +98,12 @@
     animation: slideInFromRight 0.4s ease forwards;
   }
 
+  .prodotti-grid {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  gap: 3.5rem;
+  margin-top: 4rem;
+}
   /* Overlay con fade in */
   .nav-overlay {
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -385,6 +391,13 @@
       right: 40%;
       margin-top: -10px;
     }
+
+  .prodotti-grid {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  gap: 3.5rem;
+  margin-top: 4rem;
+}
   }
   @media (max-width: 544px) {
     html {
@@ -430,9 +443,15 @@
      .prodotto-card button{
       left: 5rem;
     }
+
+  .prodotti-grid {
+  display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  gap: 3.5rem;
+  margin-top: 4rem;
+}
   }
   @media (max-width: 944px) {
-
     /* centra SOLO l’ultimo elemento */
     .section-featured#suite .features-dynamic .feature:last-child {
       grid-column: 1 / -1;
@@ -451,17 +470,4 @@
 
   
 
-  @media (max-width: 944px) {
-    /* seleziona l'ultimo elemento */
-    .section-featured#suite .features-dynamic .feature:last-child {
-      grid-column: 1 / -1;       /* occupa tutta la riga */
-      max-width: 45%;            /* larghezza limitata */
-      margin-left: auto;         /* centratura orizzontale */
-      margin-right: auto;        /* centratura orizzontale */
-      display: flex;             
-      flex-direction: column;    
-      align-items: center;       /* centra contenuto interno */
-      text-align: center;        /* testo centrato */
-    }
-  }
   
