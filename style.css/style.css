@@ -6,11 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body.nav-open {
-  overflow: hidden;
-  position: fixed; /* aggiunge questo */
-  width: 100%; /* e questo */
-}
+
 html,
 body {
   font-size: 50.5%;
@@ -516,18 +512,21 @@ HERO secondary
 .dati-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
+  justify-content: center;
+  gap: 5rem;
+  text-align: center;
 }
 .dati-text {
   flex: 1 1 45%;
 }
 .dati-image img {
+  display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 450px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-left: 1px;
+  margin: 0 auto;
 
 }
 .primary-text {
@@ -656,7 +655,17 @@ HERO secondary
 }
 .feature-icon.location{
   position: relative;
-  left: 48%;
+  color: var(--color-primary);
+}
+.feature-icon.stelle,
+.feature-icon.bar,
+  .feature-icon.ristorante,
+  .feature-icon.pizza,
+  .feature-icon.gelato,
+  .feature-icon.shopping,
+  .feature-icon.carrello
+  {
+  position: relative;
   color: var(--color-primary);
 }
 
@@ -721,14 +730,19 @@ HERO secondary
 }
 
 .pricing-container {
+  align-items: stretch;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
 }
-
+.pricing-container h3{
+  text-align: center;
+}
 .pricing-card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   background: white;
@@ -753,6 +767,10 @@ HERO secondary
   mask-composite: exclude;
   z-index: -1;
 }
+.plan-btn{
+  margin-top: auto;
+  text-align: center;
+}
 
 .pricing-card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -769,6 +787,7 @@ HERO secondary
   list-style: none;
   padding: 0;
   margin: 2rem 0;
+  flex-grow: 1;
 }
 
 .features-list li {
@@ -806,7 +825,7 @@ HERO secondary
 }
 .section-contatti {
   background-color: var(--color-grey-light);
-  padding: 19rem 6rem;
+  padding: 8rem 3rem;
   border-bottom: 0.8rem solid rgb(159, 159, 159);
 }
 .contact-text-box {
@@ -884,7 +903,6 @@ HERO secondary
   background-color: var(--color-primary-light);
   transform: scale(1.05);
 }
-
 /* ===========================
    FOOTER
 =========================== */

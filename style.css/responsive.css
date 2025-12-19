@@ -202,13 +202,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
-  .pricing-container {
-    grid-template-columns: 1fr;
-  }
-  .pricing-container {
-    display: grid;
-    max-width: 360px;
-  }
+ 
     .prodotto-card button {
         left: 0rem;
   }
@@ -225,6 +219,13 @@
   }
   .prodotto-card button{
     left: 5rem;
+  }
+      .dati-content {
+   display: flex;
+   justify-content: center;
+  }
+    .dati-image img {
+    max-width: 320px;
   }
 }
 
@@ -262,7 +263,7 @@
     max-width: 500px;
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  
+
   }
     .btn {
       font-size: 1.4rem;
@@ -297,21 +298,27 @@
       padding: 6rem 0;
     }
     .dati-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
-    flex-wrap: wrap;
+   flex-direction: column;
+   text-align: center;
   }
+    .dati-image img {
+    max-width: 320px;
+  }
+  
     .feature img {
       height: 120px;
       width: 120px;
     }
+    .pricing-container{
+      width: 390px;
+    }
     .pricing-card {
-      padding: 3rem 2rem;
+      padding: 4rem 5rem;
+   
     }
     .contact-form-box {
       padding: 5rem 4rem;
+       width: auto;
     }
     .grid--footer {
       grid-template-columns: 1fr;
@@ -438,12 +445,18 @@
   
     }
       .contact-info{
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
      .prodotto-card button{
       left: 5rem;
     }
-
+    .dati-content {
+   flex-direction: column;
+   text-align: center;
+  }
+    .dati-image img {
+    max-width: 320px;
+  }
   .prodotti-grid {
   display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -470,4 +483,9 @@
 
   
 
-  
+  @media (max-width: 1024px) {
+  .pricing-container {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 680px;
+  }
+}
