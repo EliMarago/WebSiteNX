@@ -26,10 +26,11 @@
     
     <nav class="main-nav">
       <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="prodotti.html">Prodotti</a></li>
+       <li><a class="main-nav-link home" href="#home">Home</a></li>
+        <li><a class="main-nav-link" href="#prodotti">Prodotti</a></li>
         <li><a class="main-nav-link" href="#soluzioni">Soluzioni</a></li>
         <li><a class="main-nav-link" href="#vantaggi">Vantaggi</a></li>
-        <li><a class="main-nav-link" href="#contatti">Contatti</a></li>
+        <li><a class="main-nav-link" href="#licenze">Licenze</a></li>
         <li><a class="main-nav-link nav-cta" href="#contatti">Richiedi demo</a></li>
       </ul>
       
@@ -90,7 +91,7 @@
   
   <div class="nav-overlay"></div>
 
-  <div class="container-event">
+  <div class="container-event" id="home">
     <div class="event-card">
       <div class="event-badge">NUOVO EVENTO</div>
       <img
@@ -114,7 +115,7 @@
         </p>
 
         <a href="#contatti" class="btn btn--full margin">Richiedi una demo</a>
-        <a href="#prodotti" class="btn btn--outline">Scopri di più ↓</a>
+        <a href="#suite" class="btn btn--outline">Scopri di più ↓</a>
       </div>
       <div class="hero-img-box">
         <img src="img/pagamento-cassa.png" class="hero-img" alt="Dispositivo POS" />
@@ -154,11 +155,11 @@
         <p class="feature-text">L'app mobile e Web App per la gestione delivery, <br> take away e self order</p>
       </div>
 
-          <div class="feature f5">
-        <img src="img/icon-neposdashboard.png" alt="BackOffice" />
-        <h3 class="heading-tertiary">NemPOS Dashboard</h3>
-        <p class="feature-text">L'app mobile e Web App <br> per monitorare il tuo business in tempo reale</p>
-      </div>
+<div class="feature f5">
+  <img src="img/icon-neposdashboard.png" alt="BackOffice" />
+  <h3 class="heading-tertiary">NemPOS Dashboard</h3>
+  <p class="feature-text">L'app mobile e Web App <br> per monitorare il tuo business in tempo reale</p>
+</div>
     </div>
   </section>
 
@@ -260,6 +261,7 @@
 </section>
 
 
+
   
 <section class="section-vantaggi" id="vantaggi">
   <div class="container center-text">
@@ -318,8 +320,69 @@
   </div>
 </section>
 
+ <section class="section-prodotti" id="prodotti">
+    <div class="container">
+      <h2 class="heading-secondary">I nostri prodotti</h2>
+      <p class="subheading">Una suite completa per la gestione del tuo business.</p>
   
-<section class="section-featured" id="prodotti">
+      <div class="prodotti-grid">
+        <div class="prodotto-card">
+          <div class="img-container">
+             <img src="img/cassa-Nempos.png" alt="Casse Automatiche">
+          </div>
+          <h3 class="heading-tertiary">Casse </h3>
+          <p>Gestione sicura dei pagamenti in denaro contante nel mondo Retail & Food.</p>
+          <button class="btn btn--full margin" id="openModalBtn1">Scopri di più</button>
+        </div>
+ 
+  
+        <div class="prodotto-card">
+          <div class="img-container">
+            <img src="img/cassa-Nempos.png" alt="Software Gestionali">
+          </div>
+          <h3 class="heading-tertiary">Cassa posTouch</h3>
+          <p>Il Software per l'integrazione delle nostre soluzioni nel punto vendita.</p>
+          <button class="btn btn--full" id="openModalBtn2">Scopri di più</button>
+        </div>
+  
+        <div class="prodotto-card">
+          <div class="img-container">
+            <img src="img/Kiosk Nero Eco Floor.png" alt="Kiosk Eco Floor">
+          </div>
+          <h3 class="heading-tertiary">Kiosk Eco Floor</h3>
+          <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
+          <button class="btn btn--full" id="openModalBtn3">Scopri di più</button>
+        </div>
+
+             <div class="prodotto-card">
+          <div class="img-container">
+            <img src="img/kiosk_slim.png" alt="NemPOS BackOffice">
+          </div>
+          <h3 class="heading-tertiary">Kiosk Slim</h3>
+          <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
+          <button class="btn btn--full" id="openModalBtn3">Scopri di più</button>
+        </div>
+             <div class="prodotto-card">
+          <div class="img-container">
+            <img src="img/ECO-MODEL-1.png" alt="NemPOS BackOffice">
+          </div>
+          <h3 class="heading-tertiary">Cassa Automatica <br> ECO</h3>
+          <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
+          <button class="btn btn--full" id="openModalBtn3">Scopri di più</button>
+        </div>
+             <div class="prodotto-card">
+          <div class="img-container">
+            <img src="img/plus-model.png" alt="NemPOS BackOffice">
+          </div>
+          <h3 class="heading-tertiary">Cassa Automatica <br> PLUS</h3>
+          <p>Controlla magazzino, fornitori e dipendenti da una piattaforma semplice.</p>
+          <button class="btn btn--full" id="openModalBtn3">Scopri di più</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<section class="section-featured" id="licenze">
   <div class="container ">
     <h2 class="heading-secondary">LICENZE</h2>
     <p class="subheading">Inizia a utilizzare NemPOS
@@ -385,20 +448,7 @@
       </div>
     </div>
   </section>
-  
-    <section class="section-cta" id="contatti">
-      <div class="container grid grid--2-cols grid--center-v">
-        <div class="cta-text-box">
-          <h2 class="heading-secondary">Richiedi una demo</h2>
-          <p class="cta-text">
-            Scopri come NemPOS può semplificare la gestione della tua attività e farti risparmiare tempo ogni giorno.
-          </p>
-         </div>
-        <div class="cta-img-box" role="img" aria-label="Immagine contatto NemPOS">
-          <img src="img/richiedi-demo.png" alt="Richiedi demo">
-        </div>
-      </div>
-    </section>
+
   
 <div class="wave-container">
   <svg viewBox="0 0 1000 200" preserveAspectRatio="none" style="width: 100%; height: 100%;">

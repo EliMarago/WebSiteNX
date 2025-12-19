@@ -52,10 +52,10 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 .grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .grid--4-cols {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* TIPOGRAFIA */
@@ -321,6 +321,7 @@ HERO secondary
     margin-top: -10px;
   }
     .cta-text-box .heading-secondary {
+      margin-top: 50px;
     padding: 2rem;
     color: #80bfffd1;
     text-align: center;
@@ -658,6 +659,7 @@ HERO secondary
   left: 48%;
   color: var(--color-primary);
 }
+
 .icon-inner {
   height: 100%;
   width: 100%;
@@ -677,6 +679,9 @@ HERO secondary
 .feature-text {
   font-size: 2rem;
 }
+.container.grid--3-cols > :last-child {
+  grid-column: 1 / -1; 
+}
 
 /*TRANSAZIONI*/
 .feature,
@@ -686,7 +691,19 @@ HERO secondary
 }
 .feature:hover {
   transform: translateY(-5px);
+}
+.grid.grid--3-cols.f5 {
+  grid-column: -3;   /* occupa tutta la riga */
+  display: flex;
+  justify-content: center;
+}
+.feature-center {
+  display: flex;
+  justify-content: center;
+}
 
+.feature-center .feature {
+  max-width: 33%;
 }
 /* ===========================
    PRICING
@@ -789,7 +806,7 @@ HERO secondary
 }
 .section-contatti {
   background-color: var(--color-grey-light);
-  padding: 3rem 0;
+  padding: 19rem 6rem;
   border-bottom: 0.8rem solid rgb(159, 159, 159);
 }
 .contact-text-box {
@@ -819,7 +836,7 @@ HERO secondary
 }
 .contact-form-box {
   background-color: var(--color-white);
-  padding: 4.8rem;
+  padding: 5rem;
   border-radius: 1.6rem;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
 }
@@ -988,6 +1005,22 @@ HERO secondary
   margin-bottom: 25px;
   text-align: center;
 }
+.main-nav-link.home{
+  color: var(--color-primary);
+  font-weight: 600;
+  position: relative;
+}
+.main-nav-link.home::after {
+  width: 100%; /* Sottolineatura sempre visibile */
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.main-nav-link.home:hover {
+  color: var(--color-primary-light);
+}
+.main-nav a:hover{
+  color: var(--color-primary-light);
+}
 
 /*  sezione prodotti */
 .section-prodotti {
@@ -1063,7 +1096,7 @@ HERO secondary
 }
 .prodotti-grid {
   display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   gap: 3.5rem;
   margin-top: 4rem;
 }
@@ -1100,12 +1133,19 @@ HERO secondary
   animation: slideInFromRight 0.4s ease forwards;
 }
 .nav-overlay {
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* 🔑 QUESTO RISOLVE */
+  transition: opacity .3s ease, visibility .3s ease;
+  z-index: 900;}
 
 .header.nav-open ~ .nav-overlay {
   opacity: 1;
   visibility: visible;
+   pointer-events: auto;
   backdrop-filter: blur(3px);
 }
 .main-nav-link:hover {
