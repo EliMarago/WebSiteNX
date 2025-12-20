@@ -319,7 +319,7 @@
    
     }
     .contact-form-box {
-      padding: 5rem 4rem;
+      padding: 3rem 2rem;
        width: auto;
     }
     .grid--footer {
@@ -406,7 +406,6 @@
     .suite-card:last-child {
       grid-column: 1 / -1;
       max-width: 450px;
-      margin: 0 auto;
     }
     .suite-grid {
       grid-template-columns: 1fr;
@@ -503,7 +502,7 @@
 .section-contatti{
   padding: 7rem 2rem;
 }
-.hero-description{
+.hero-description.info{
   text-align: center;
 }
   }

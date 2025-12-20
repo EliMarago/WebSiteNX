@@ -1,3 +1,13 @@
+/* VARIABILI COLORI */
+:root {
+  --color-primary: #003870;
+  --color-primary-light: #0077c8;
+  --color-accent: #00b7ff;
+  --color-grey-dark: #333;
+  --color-grey-light: #f2f2f2;
+  --color-white: #fff;
+}
+
 /* ===========================
    RESET E BASE
 =========================== */
@@ -21,16 +31,6 @@ body {
   background-color: #fff;
 }
 
-/* VARIABILI COLORI */
-:root {
-  --color-primary: #003870;
-  --color-primary-light: #0077c8;
-  --color-accent: #00b7ff;
-  --color-grey-dark: #333;
-  --color-grey-light: #f2f2f2;
-  --color-white: #fff;
-}
-
 /* CONTENITORI E GRID */
 .container {
   width: 90%;
@@ -45,9 +45,6 @@ body {
 }
 
 .grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid--3-cols {
   grid-template-columns: repeat(2, 1fr);
 }
 .grid--4-cols {
@@ -175,10 +172,6 @@ body {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* NAV MOBILE */
-/* .main-nav {
-  /* visibile desktop normalmente */
-/*} */
 
 .header.nav-open .main-nav {
   right: 0;
@@ -253,13 +246,13 @@ body {
 }
 
 .nav-cta {
-  position: relative; /* fondamentale */
-  z-index: 50; /* deve stare sopra overlay o altri elementi */
+  position: relative; 
+  z-index: 50; 
   background-color: var(--color-primary);
   color: var(--color-white);
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
-  cursor: pointer; /* assicura il cursore mano */
+  cursor: pointer; 
   transition: all 0.3s ease;
 }
 .nav-cta::before {
@@ -297,45 +290,7 @@ body {
 .nav-cta:active {
   transform: scale(0.98);
 }
-/*
-HERO secondary
-*/
-  .section-cta {
-    background: linear-gradient(354deg, #002f5d8f 0%, #001f3d 100%);    color: #e9f4ff;
-    padding: 2rem 0;
-    border-radius: 2px;
-    margin-bottom: 0;
-    padding: 2rem 0 12rem 0; 
 
-  }
-  .section-cta img{
-    width: 420px;
-    left: 60%;
-    right: 20%;
-    margin-top: -10px;
-  }
-    .cta-text-box .heading-secondary {
-      margin-top: 50px;
-    padding: 2rem;
-    color: #80bfffd1;
-    text-align: center;
-  }
-  
-  .cta-text {
-    font-size: 1.6rem;
-    margin: 2rem 0 3rem 0;
-    text-align: center;
-  }
-    .cta-text-box .heading-secondary {
-    padding: 2rem;
-    color: #80bfffd1;
-    text-align: center;
-  }
-  
-  .cta-img-box {
-    height: 100%;
-    border-radius: 1.2rem;
-  }
 /* ===========================
    HERO
 =========================== */
@@ -386,8 +341,10 @@ HERO secondary
 .hero-description {
   font-size: 2.2rem;
   margin-bottom: 4.2rem;
-  text-align: center;
   color: #e9f4ff;
+}
+.hero-description.info{
+  text-align: center;
 }
 .hero-description span{
   color: var(--color-primary);
@@ -531,7 +488,11 @@ HERO secondary
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
+}
+.dati-image img:hover{
+  transform: translateY(-8px);
 }
 .primary-text {
   color: var(--color-primary);
@@ -720,9 +681,13 @@ HERO secondary
 =========================== */
 .suite-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   margin-top: 5rem;
+}
+.suite-card:last-child{
+  grid-column: 1 / -1;
+
 }
 .feature {
   text-align: center;
@@ -873,7 +838,7 @@ HERO secondary
   position: relative;
   z-index: 2;
   transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+
 }
 .suite-card:hover .suite-icon-box img {
   transform: scale(1.15) rotate(5deg);
@@ -982,9 +947,9 @@ HERO secondary
   background: linear-gradient(135deg, #00b7ff, #00d4ff);
 }
 /* ===========================
-   PRICING
+   Licenze
 =========================== */
- /* PRICING MIGLIORATO */
+
  .pricing-container {
   align-items: stretch;
   display: grid;
@@ -1037,7 +1002,10 @@ HERO secondary
   animation: badgePulse 2s ease-in-out infinite;
 }
 
-/* Prezzi */
+/* Licenze */
+.divider-line.pricing{
+margin: 2rem 0;
+}
 .pricing-price {
   display: flex;
   align-items: baseline;
