@@ -384,8 +384,9 @@ HERO secondary
 }
 
 .hero-description {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 4.2rem;
+  text-align: center;
   color: #e9f4ff;
 }
 .hero-description span{
@@ -783,73 +784,118 @@ HERO secondary
 /* ===========================
    PRICING
 =========================== */
-.pricing-card h4{
-  font-size: 1.5rem;
-  padding: 4rem;
-  
-}
-
-.pricing-section {
-  padding: 80px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.pricing-container {
+ /* PRICING MIGLIORATO */
+ .pricing-container {
   align-items: stretch;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
-  max-width: 1802px;
-
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 2rem;
 }
-.pricing-container h3{
-  text-align: center;
-}
+
 .pricing-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Cambiato per badge */
   background: white;
   padding: 4rem 3rem;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 2px solid #094e93;
 }
-.pricing-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 3px;
-  padding: 2px; /* Spessore del bordo */
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: -1;
-}
-.plan-btn{
-  margin-top: auto;
-  text-align: center;
+
+/* Card in evidenza */
+.pricing-card.featured {
+  border: 3px solid var(--color-accent);
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 119, 200, 0.2);
 }
 
 .pricing-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary-light);
 }
 
-.pricing-card h3 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
+/* Badge "Più popolare" */
+.pricing-badge {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 119, 200, 0.4);
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* Prezzi */
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+  gap: 0.5rem;
+}
+
+.price-amount {
+  font-size: 5rem;
+  font-weight: 800;
   color: var(--color-primary);
+  line-height: 1;
 }
 
+.price-period {
+  font-size: 2rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.pricing-subtitle {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+/* Stelline più grandi */
+.container-icon.stella {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.container-icon.stella .feature-icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+/* Titoli card */
+.pricing-card h3 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.pricing-card h4 {
+  font-size: 1.6rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Features list */
 .features-list {
   list-style: none;
   padding: 0;
@@ -858,22 +904,74 @@ HERO secondary
 }
 
 .features-list li {
-  margin-bottom: 1.2rem;
-  padding-left: 2.6rem;
+  margin-bottom: 1.5rem;
+  padding-left: 3rem;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
 .features-list li::before {
-  content: "✔";
+  content: "✓";
   position: absolute;
   left: 0;
-  color: #1a73e8;
+  color: var(--color-accent);
   font-weight: bold;
+  font-size: 2rem;
 }
 
-.popular {
-  border: 2px solid #1a73e8;
+/* Separatore "Oppure" */
+.features-list h4 {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 2rem 0;
+  position: relative;
+  font-size: 1.8rem;
+  color: var(--color-grey-dark);
+}
+
+.features-list h4::before,
+.features-list h4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ddd, transparent);
+}
+
+.features-list h4::before {
+  left: 0;
+}
+
+.features-list h4::after {
+  right: 0;
+}
+
+/* CTA Button */
+.plan-btn {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.btn--full-enter {
+  width: 100%;
+  padding: 1.8rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.featured .btn--full-enter {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
+  box-shadow: 0 8px 20px rgba(0, 119, 200, 0.3);
+}
+
+.featured .btn--full-enter:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 119, 200, 0.4);
 }
 
 /* ===========================
@@ -892,8 +990,10 @@ HERO secondary
 }
 .section-contatti {
   background-color: var(--color-grey-light);
-  padding: 10rem 6rem;
+  padding: 12rem 6rem;
   border-bottom: 0.8rem solid rgb(159, 159, 159);
+  padding-top: 10rem;
+
 }
 .contact-text-box {
   padding-right: 4.8rem;
@@ -902,11 +1002,14 @@ HERO secondary
 .contact-info a {
   color: var(--color-primary);
   text-decoration: none;
-  
+  font-size: 2rem;
 }
+.contact-info li{
+  font-size: 2rem;
+} 
 .contact-info {
   list-style: none;
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   line-height: 1.8;
   margin-left: 2rem;
 
@@ -926,7 +1029,6 @@ HERO secondary
   border-radius: 2.2rem;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.1);
   max-width: 90rem; 
-  
 }
 
 .contact-form {
@@ -935,11 +1037,12 @@ HERO secondary
   gap: 3.4rem;
 }
 .contact-form label {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
   display: block;
   color: var(--color-primary);
+
 }
 
 .contact-form input,
@@ -1080,7 +1183,9 @@ HERO secondary
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 1.5rem;
 }
+
 .section-mappa {
   width: 100%;
   height: 400px;

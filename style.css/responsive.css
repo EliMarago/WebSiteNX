@@ -111,7 +111,7 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
-  .header.nav-open ~ .nav-overlay {
+  .header.nav-open  .nav-overlay {
     opacity: 1;
     visibility: visible;
     backdrop-filter: blur(3px);
@@ -312,7 +312,7 @@
       width: 120px;
     }
     .pricing-container{
-      width: 290px;
+      width: 340px;
     }
     .pricing-card {
       padding: 4rem 5rem;
@@ -467,6 +467,15 @@
 }
 .soluzioni-grid {
   grid-template-columns: (2,1fr)r;
+}
+.feature-text{
+  font-size: 1.7rem;
+}
+.section-contatti{
+  padding: 7rem 2rem;
+}
+.hero-description{
+  text-align: center;
 }
   }
   @media (max-width: 944px) {
