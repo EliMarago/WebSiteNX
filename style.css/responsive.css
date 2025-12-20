@@ -400,6 +400,35 @@
     .soluzioni-grid {
       grid-template-columns: (2,1fr)r;
     }
+    .suite-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .suite-card:last-child {
+      grid-column: 1 / -1;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+    .suite-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    
+    .suite-card {
+      padding: 3rem 2rem;
+    }
+    
+    .suite-icon-box {
+      width: 140px;
+      height: 140px;
+    }
+    .suite-icon-box img {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .suite-card .heading-tertiary {
+      font-size: 2rem;
+    }
 
   .prodotti-grid {
   display: grid;

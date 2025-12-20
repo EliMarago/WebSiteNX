@@ -148,7 +148,7 @@ const observer = new IntersectionObserver(
 );
 
 document
-  .querySelectorAll(".feature, .pricing-card, .solution-item")
+  .querySelectorAll(".feature, .pricing-card, .solution-item ,.solution-item, .suite-card")
   .forEach(el => {
     el.classList.add("fade-in-hidden");
     observer.observe(el);
@@ -243,3 +243,4 @@ window.addEventListener('load', () => {
 // Rimuove eventuali classi bloccanti rimaste
 document.body.classList.remove('nav-open');
 document.querySelector('.header')?.classList.remove('nav-open');
+

@@ -718,6 +718,12 @@ HERO secondary
 /* ===========================
    FEATURE
 =========================== */
+.suite-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 5rem;
+}
 .feature {
   text-align: center;
   transition: transform 0.3s ease;
@@ -780,6 +786,200 @@ HERO secondary
 
 .feature-center .feature {
   max-width: 33%;
+}
+
+.suite-card {
+  position: relative;
+  background: white;
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Bordi colorati diversi */
+.suite-card[data-color="blue"] {
+  border-top: 4px solid #0077c8;
+}
+.suite-card[data-color="purple"] {
+  border-top: 4px solid #9b59b6;
+}
+.suite-card[data-color="green"] {
+  border-top: 4px solid #27ae60;
+}
+.suite-card[data-color="orange"] {
+  border-top: 4px solid #e67e22;
+}
+.suite-card[data-color="cyan"] {
+  border-top: 4px solid #00b7ff;
+}
+/* Background gradient on hover */
+.suite-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,119,200,0.05) 0%, rgba(0,183,255,0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+.suite-card:hover::before {
+  opacity: 1;
+}
+
+.suite-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 56, 112, 0.15);
+}
+
+/* Badge angolo */
+.suite-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 119, 200, 0.3);
+  z-index: 2;
+}
+/* Icona con effetto glow */
+.suite-icon-box {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.suite-icon-box img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+.suite-card:hover .suite-icon-box img {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Glow effect dietro icona */
+.suite-glow {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(0,119,200,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 3s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.suite-card.suite-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.suite-card.suite-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.suite-card:hover .suite-glow {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Titolo */
+.suite-card .heading-tertiary {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-primary);
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  }
+  .suite-card:hover .heading-tertiary {
+    color: var(--color-accent);
+  }
+  
+  /* Descrizione */
+  .suite-description {
+    font-size: 1.6rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  /* Tags features */
+.suite-features {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.suite-tag {
+  display: inline-block;
+  background: rgba(0, 119, 200, 0.1);
+  color: var(--color-primary);
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.suite-card:hover .suite-tag {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Varianti colori badge per ogni card */
+.suite-card[data-color="blue"] .suite-badge {
+  background: linear-gradient(135deg, #0077c8, #00b7ff);
+}
+.suite-card[data-color="purple"] .suite-badge {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+.suite-card[data-color="green"] .suite-badge {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+.suite-card[data-color="orange"] .suite-badge {
+  background: linear-gradient(135deg, #d35400, #e67e22);
+}
+.suite-card[data-color="cyan"] .suite-badge {
+  background: linear-gradient(135deg, #00b7ff, #00d4ff);
 }
 /* ===========================
    PRICING
@@ -1475,5 +1675,4 @@ margin-bottom: 1.5rem;
     50% { opacity: 1; }
     100% { opacity: 0.4; }
   }
-  
   
