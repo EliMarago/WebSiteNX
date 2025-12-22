@@ -256,6 +256,10 @@
     .logo {
       height: 50px;
     }
+    .sticky .header{
+      height: 7rem;
+
+    }
     .heading-primary {
       font-size: 3rem;
     }
