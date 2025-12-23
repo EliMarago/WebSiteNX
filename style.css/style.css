@@ -1194,21 +1194,6 @@ body {
   border-color: var(--color-primary-light);
 }
 
-/* Badge "Più popolare" */
-.pricing-badge {
-  position: absolute;
-  top: -15px;
-  right: 20px;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 50px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(0, 119, 200, 0.4);
-  animation: badgePulse 2s ease-in-out infinite;
-}
 
 /* Licenze */
 .divider-line.pricing{
@@ -1603,11 +1588,11 @@ margin-bottom: 1.5rem;
   margin-bottom: 200px;
 }
 .section-featured#prodotti {
-  padding-top: 6rem; /* aumenta lo spazio sopra la sezione */
-  padding-bottom: 10rem; /* mantiene lo spazio sotto */
+  padding-top: 6rem; 
+  padding-bottom: 10rem; 
 }
 .section-featured {
-  padding-top: 8rem 0; /* più spazio in alto */
+  padding-top: 8rem 0; 
   padding-bottom: 10rem;
 
 }
@@ -1616,13 +1601,13 @@ margin-bottom: 1.5rem;
 
 }
 .section-featured .container {
-  max-width: 140rem; /* Limita larghezza */
+  max-width: 140rem; 
 }
 
 
 .prodotto-card {
-  background: rgba(255, 255, 255, 0.08); /* semi-trasparente */
-  backdrop-filter: blur(10px); /* sfocatura sullo sfondo */
+  background: rgba(255, 255, 255, 0.08); 
+  backdrop-filter: blur(10px); 
   border-radius: 2rem;
   padding: 2.5rem 2rem;
   text-align: center;
@@ -1706,7 +1691,7 @@ margin-bottom: 1.5rem;
   margin-top: 9.6rem;
 }
 .sticky .event-card {
-  margin-top: 9rem; /* Compensa l'altezza dell'header fisso */
+  margin-top: 9rem; 
 }
 
 .header.nav-open .main-nav-list li {
