@@ -1,7 +1,7 @@
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 59em) {
+@media (max-width: 944px) {
   html {
     font-size: 56.25%;
   }
@@ -242,7 +242,7 @@
     align-items: center;
   }
 }
-@media (max-width:  48em) {
+@media (max-width:  768px) {
     html {
       font-size: 50%;
     }
@@ -459,7 +459,7 @@
   
 }
   
-  @media (max-width: 34em) {
+  @media (max-width: 544px) {
     html {
       font-size: 43.75%;
     }
@@ -530,10 +530,6 @@
 .hero-stats{
   grid-template-columns: repeat(2, 2fr);
 }
-   .suite-card:last-child {
-      grid-column: 1 / -1;
-      max-width: 450px;
-    }
 }
 
 
