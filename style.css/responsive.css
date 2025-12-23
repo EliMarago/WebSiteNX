@@ -1,7 +1,7 @@
 /* ===========================
    RESPONSIVE
 =========================== */
-@media (max-width: 944px) {
+@media (max-width: 59em) {
   html {
     font-size: 56.25%;
   }
@@ -242,7 +242,7 @@
     align-items: center;
   }
 }
-@media (max-width: 768px) {
+@media (max-width:  48em) {
     html {
       font-size: 50%;
     }
@@ -452,8 +452,13 @@
 .hero-stats{
   grid-template-columns: repeat(2, 2fr);
 }
+  .pricing-container {
+    grid-template-columns: repeat(1,1fr);
+   width: 680px;
   }
-  @media (max-width: 544px) {
+  }
+  
+  @media (max-width: 34em) {
     html {
       font-size: 43.75%;
     }
@@ -477,9 +482,9 @@
       font-size: 3.2rem;
     }
     .event-card::before {
-          right: 23rem;
-          bottom: 9px;
-          padding: 0.3rem 3rem;
+      right: 23rem;
+      bottom: 9px;
+      padding: 0.3rem 3rem;
     }
     .hero-dynamic {
       font-size: 2rem;
@@ -525,8 +530,5 @@
   grid-template-columns: repeat(2, 2fr);
 }
 }
-  @media (max-width: 1024px) {
-  .pricing-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
+
+
