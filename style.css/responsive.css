@@ -205,10 +205,9 @@
     gap: 4rem;
   }
  
-    .prodotto-card button {
-        left: 0rem;
+  .prodotto-card button {
+    left: 0rem;
   }
-
   @keyframes slideInFromRight {
     from {
       opacity: 0;
@@ -243,9 +242,7 @@
     align-items: center;
   }
 }
-
 @media (max-width: 768px) {
-
     html {
       font-size: 50%;
     }
@@ -491,8 +488,7 @@
       padding: 2rem;
     }
     .modal-content{
-          width: 349px;
-  
+      width: 349px;
     }
       .contact-info{
       font-size: 1.6rem;
@@ -528,11 +524,9 @@
 .hero-stats{
   grid-template-columns: repeat(2, 2fr);
 }
-  }
-
+}
   @media (max-width: 1024px) {
   .pricing-container {
     grid-template-columns: repeat(1, 1fr);
-    max-width: 680px;
   }
 }
