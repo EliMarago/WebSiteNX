@@ -22,6 +22,7 @@ body {
   font-size: 48.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: 'Poppins';
 }
 
 body {
@@ -1621,6 +1622,9 @@ margin-bottom: 1.5rem;
   width: 100%;
   border-radius: 1.2rem;
 }
+.section-prodotti p{
+  color: #001a3d;
+}
 
 .prodotto-card:hover {
   transform: translateY(-10px) scale(1.03);
@@ -1714,6 +1718,8 @@ margin-bottom: 1.5rem;
   transform: translateX(10px);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
+
+
 
 
 
