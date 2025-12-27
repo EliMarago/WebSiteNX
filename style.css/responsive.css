@@ -498,6 +498,9 @@
       .contact-info{
       font-size: 1.6rem;
     }
+    .contact-info a{
+      font-size: 1.9rem;
+    }
      .prodotto-card button{
       left: 5rem;
     }
