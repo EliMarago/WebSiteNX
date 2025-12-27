@@ -1346,10 +1346,10 @@ margin: 2rem 0;
 .fa-solid.fa-phone,
 .fa-solid.fa-location-dot {
   font-size: 23px;
-  padding: 5px;
-  background-color: #002f5d;
+  padding: 8px;
+  background-color: #002f5def;
   color: #cde2ff;
-  border-radius: 8px;
+  border-radius: 27px;
   margin-right: 10px;
   margin-top: 22px;
   margin-left: -23px;

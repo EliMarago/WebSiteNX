@@ -808,8 +808,9 @@
         <p style="font-weight: 600; font-size: 1.9rem; margin-bottom: 1.7rem;">Link utili</p>
         <ul class="footer-nav">
           <li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
+          <li><a class="footer-link" href="cookie-policy.html">Cookie Policy</a></li>
           <li><a class="footer-link" href="#">Termini e condizioni</a></li>
-          <li><a class="footer-link" href="#">Supporto</a></li>
+          <li><a class="footer-link" href="#cookieConsent">Gestisci Cookie</a></li>
         </ul>
       </div>
     </div>
@@ -817,113 +818,25 @@
   
   <script src="script.js"></script>
   <script src="cookie.js"></script>
-</body>
-<!-- COOKIE CONSENT BANNER -->
-<div class="cookie-consent" id="cookieConsent">
-  <div class="cookie-content">
-    <div class="cookie-text">
-      <h3>🍪 Questo sito utilizza i cookie</h3>
-      <p>
-        Utilizziamo cookie tecnici e, previo tuo consenso, cookie analitici per migliorare la tua esperienza. 
-        <a href="privacy.html" target="_blank">Privacy Policy</a> | 
-        <a href="cookie-policy.html" target="_blank">Cookie Policy</a>
-      </p>
-    </div>
-    
-    <div class="cookie-actions">
-      <button class="cookie-btn btn-settings" id="cookieSettings">
-        <ion-icon name="settings"></ion-icon>
-        Gestisci preferenze
-      </button>
-      <button class="cookie-btn btn-accept-selected" id="acceptSelected">
-        Accetta selezionati
-      </button>
-      <button class="cookie-btn btn-accept-all" id="acceptAll">
-        Accetta tutti
-      </button>
+
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p>
+          🍪 Questo sito utilizza cookie di profilazione in linea con la normativa sul GDPR e l'Informativa sulla Privacy. Continuando a navigare, acconsenti all'utilizzo 
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn btn-reject" id="rejectAll">
+          Solo necessari
+        </button>
+        <button class="cookie-btn btn-accept" id="acceptAll">
+          Accetta
+        </button>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- COOKIE SETTINGS MODAL -->
-<div class="cookie-modal" id="cookieModal">
-  <div class="cookie-modal-content">
-    <div class="cookie-modal-header">
-      <h2>Gestione Cookie</h2>
-      <button class="cookie-modal-close" id="closeModal">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </div>
-    
-    <div class="cookie-modal-body">
-      <p class="cookie-intro">
-        Utilizziamo i cookie per offrirti la migliore esperienza sul nostro sito. 
-        Puoi scegliere quali categorie di cookie accettare.
-      </p>
-      
-      <!-- Cookie Necessari (sempre attivi) -->
-      <div class="cookie-category">
-        <div class="cookie-category-header">
-          <div class="cookie-category-info">
-            <h3>
-              <ion-icon name="shield-checkmark"></ion-icon>
-              Cookie Tecnici Necessari
-            </h3>
-            <p>Essenziali per il funzionamento del sito</p>
-          </div>
-          <div class="cookie-toggle">
-            <input type="checkbox" id="necessary" checked disabled>
-            <label for="necessary" class="toggle-disabled">Sempre attivi</label>
-          </div>
-        </div>
-        <div class="cookie-category-details">
-          <p>Questi cookie sono necessari per il corretto funzionamento del sito e non possono essere disabilitati. Include:</p>
-          <ul>
-            <li>Cookie di sessione</li>
-            <li>Preferenze sulla privacy</li>
-            <li>Sicurezza del sito</li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Cookie Analitici -->
-      <div class="cookie-category">
-        <div class="cookie-category-header">
-          <div class="cookie-category-info">
-            <h3>
-              <ion-icon name="analytics"></ion-icon>
-              Cookie Analitici
-            </h3>
-            <p>Ci aiutano a migliorare il sito</p>
-          </div>
-          <div class="cookie-toggle">
-            <input type="checkbox" id="analytics" class="cookie-checkbox">
-            <label for="analytics" class="toggle-label">
-              <span class="toggle-slider"></span>
-            </label>
-          </div>
-        </div>
-        <div class="cookie-category-details">
-          <p>Questi cookie ci permettono di analizzare come viene utilizzato il sito per migliorare l'esperienza utente:</p>
-          <ul>
-            <li>Google Analytics - statistiche anonimizzate</li>
-            <li>Hotjar - registrazioni sessioni (anonime)</li>
-            <li>Dati sul comportamento degli utenti</li>
-          </ul>
-          <p class="cookie-provider">
-            <strong>Provider:</strong> Google LLC, Hotjar Ltd.<br>
-            <strong>Durata:</strong> Fino a 2 anni
-          </p>
-        </div>
-      </div>
-      
-      <!-- Cookie Marketing -->
-      <div class="cookie-category">
-        <div class="cookie-category-header">
-          <div class="cookie-category-info">
-            <h3>
-              <ion-icon name="megaphone"></ion-icon>
-              Cookie di Marketing
-            </h3>
-            <p>Per off
+  
+</body>
 </html>
