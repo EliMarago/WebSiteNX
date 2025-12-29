@@ -655,6 +655,7 @@ body {
 }
 
 /*sezione dati*/
+
 .dati-container {
   max-width: 130rem;
   margin: 0 auto;
@@ -679,25 +680,57 @@ body {
   height: 28px;
   pointer-events: none;
 }
+.section-featured#dati {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.dati-content {
+  align-items: center;
+  gap: 8rem;
+  text-align: left;
+  margin-top: 6rem;
+}
 .container-icon a:hover {
   color: #0077c8;
   fill: #0077c8;
 }
-.dati-content {
+.dati-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+ align-items: center;
+
+}
+
+.dati-list li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
-  text-align: center;
+  gap: 1.4rem;
+  font-size: 2rem;
+  color: #444;
 }
+
+.dati-list ion-icon {
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+
 .dati-text {
   flex: 1 1 45%;
+}
+.dati-text strong{
+  color: var(--color-primary);
 }
 .dati-image img {
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
@@ -716,6 +749,7 @@ body {
   justify-content: center;
   color: var(--color-primary);
 }
+
 /*==========================
    SOLUZIONI TIMLINE
 ==========================*/
@@ -789,7 +823,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
   background: linear-gradient(135deg, #0077c8, #00b7ff);
@@ -1040,95 +1074,6 @@ body {
   
   .timeline-content {
     width: 48%;
-  }
-}
-
-@media (max-width: 968px) {
-  .timeline::before {
-    left: 50px;
-  }
-
-  .timeline-icon {
-    left: 50px;
-    width: 80px;
-    height: 80px;
-  }
-
-  .timeline-icon ion-icon {
-    font-size: 3.5rem;
-  }
-
-  .timeline-content {
-    width: calc(100% - 140px);
-    margin-left: 120px !important;
-  }
-
-  .timeline-item:nth-child(odd) .timeline-content::before {
-    left: -25px;
-    right: auto;
-    border-width: 25px 25px 25px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  .timeline-image {
-    position: static;
-    width: calc(100% - 140px);
-    margin: 3rem 0 0 120px;
-    transform: none;
-  }
-
-  .timeline-item:hover .timeline-image {
-    transform: scale(1.03);
-  }
-}
-
-@media (max-width: 600px) {
-  .section-timeline {
-    padding: 6rem 0;
-  }
-
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timeline-icon {
-    left: 30px;
-    width: 60px;
-    height: 60px;
-  }
-
-  .timeline-icon ion-icon {
-    font-size: 2.8rem;
-  }
-
-  .timeline-content {
-    width: calc(100% - 100px);
-    margin-left: 90px !important;
-    padding: 3rem 2rem;
-  }
-
-  .timeline-badge {
-    width: 50px;
-    height: 50px;
-    font-size: 2rem;
-    left: 2rem;
-  }
-
-  .timeline-title {
-    font-size: 2.4rem;
-  }
-
-  .timeline-description {
-    font-size: 1.6rem;
-  }
-
-  .timeline-image {
-    width: calc(100% - 100px);
-    margin-left: 90px;
-  }
-
-  .timeline-item {
-    margin-bottom: 6rem;
   }
 }
 
