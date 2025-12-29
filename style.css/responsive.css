@@ -506,7 +506,7 @@
     left: 30px;
     width: 60px;
     height: 60px;
-     transform: translate(-48%, -190%);
+     transform: translate(-48%, -256%);
   }
 
   .timeline-icon ion-icon {
@@ -537,6 +537,9 @@
   .timeline-image {
     width: calc(100% - 100px);
     margin-left: 90px;
+  }
+  .timeline-image img{
+    width: 80%;
   }
 
   .timeline-item {
@@ -637,7 +640,7 @@
     left: 30px;
     width: 60px;
     height: 60px;
-     transform: translate(-50%, -210%);
+    transform: translate(-48%, -256%);
   }
 
   .timeline-icon ion-icon {
@@ -701,3 +704,4 @@
      transform: translate(-50%, -400%);
   }
 }
+
