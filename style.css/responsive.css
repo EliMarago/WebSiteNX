@@ -545,6 +545,71 @@
   .timeline-item {
     margin-bottom: 6rem;
   }
+  .section-dati {
+    padding: 5rem 0;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-wrapper ion-icon {
+    font-size: 4rem;
+  }
+
+  .dati-header .heading-secondary {
+    font-size: 3rem;
+  }
+
+  .subheading-intro {
+    font-size: 1.7rem;
+  }
+
+  .dati-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .dati-text {
+    padding: 0;
+  }
+
+  .dati-stats {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .feature-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.6rem;
+  }
+
+  .feature-card h3 {
+    font-size: 2rem;
+  }
+
+  .feature-card p {
+    font-size: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 3.5rem;
+  }
+
+  .stat-icon {
+    font-size: 4rem;
+  }
+
+  .btn-cta {
+    padding: 1.6rem 3rem;
+    font-size: 1.6rem;
+  }
   
 }
   @media (max-width: 544px) {
@@ -703,5 +768,33 @@
   .timeline-icon{
      transform: translate(-50%, -400%);
   }
+  .dati-header .heading-secondary {
+    font-size: 3.5rem;
+  }
+
+  .dati-content {
+    gap: 4rem;
+  }
+
+  .dati-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
+@media (max-width: 480px) {
+  .dati-header .heading-secondary {
+    font-size: 2.5rem;
+  }
+
+  .subheading-intro {
+    font-size: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .stat-card {
+    padding: 2.5rem 1.5rem;
+  }
+}
