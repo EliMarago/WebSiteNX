@@ -258,7 +258,7 @@
   }
 
   .timeline-content {
-    width: calc(100% - 140px);
+    width: calc(100% - 240px);
     margin-left: 120px !important;
   }
 
@@ -279,6 +279,10 @@
   .timeline-item:hover .timeline-image {
     transform: scale(1.03);
   }
+    .checkbox label{
+    font-size: 1.6rem;
+  }
+
 }
 @media (max-width:  768px) {
     html {
@@ -782,7 +786,7 @@
     grid-template-columns: repeat(3,1fr);
   }
   .timeline-icon{
-     transform: translate(-50%, -400%);
+     transform: translate(-50%, -240%);
   }
   .dati-header .heading-secondary {
     font-size: 3.5rem;
@@ -795,6 +799,14 @@
   .dati-stats {
     grid-template-columns: repeat(2, 1fr);
   }
+  .section-hero{
+    padding-top: 20px;
+    padding-bottom: 27px;
+  }
+.icon-wrapper{
+   margin-bottom: 10px;
+
+}
 }
 
 @media (max-width: 480px) {
@@ -813,5 +825,6 @@
   .stat-card {
     padding: 2.5rem 1.5rem;
   }
+
 }
 
