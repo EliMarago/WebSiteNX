@@ -724,7 +724,7 @@ body {
   background-clip: text;
 }
 .subheading-intro {
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: #666;
   max-width: 800px;
   margin: 0 auto;
@@ -1252,17 +1252,6 @@ body {
   transform: scale(1.08);
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .timeline-image {
-    width: 40%;
-  }
-  
-  .timeline-content {
-    width: 48%;
-  }
-}
-
 
 /* ===========================
   SOLUZIONI
@@ -1307,33 +1296,6 @@ body {
   font-weight: 600;
   color: var(--color-grey-dark);
   margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 1200px) {
-  .soluzioni-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .soluzioni-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  
-  .soluzione-card {
-    padding: 3rem 1.5rem;
-  }
-  
-  .soluzione-icon {
-    width: 6rem;
-    height: 6rem;
-  }
-  
-  .soluzione-title {
-    font-size: 1.7rem;
-  }
 }
 .step-title-wrapper {
   display: flex;
@@ -1901,15 +1863,13 @@ margin: 2rem 0;
 }
 
 .features-list li::before {
-  content: "âœ“";
+  content: "✔";
   position: absolute;
   left: 0;
   color: var(--color-accent);
   font-weight: bold;
   font-size: 2rem;
 }
-
-/* Separatore "Oppure" */
 .features-list h4 {
   text-align: center;
   padding: 2rem 0;
@@ -2242,7 +2202,7 @@ margin-bottom: 1.5rem;
   background: rgba(255, 255, 255, 0.08); 
   backdrop-filter: blur(10px); 
   border-radius: 2rem;
-  padding: 2.5rem 2rem;
+  padding: 6rem 4rem;
   text-align: center;
   box-shadow: 0 8px 25px rgb(0 0 0 / 9%);
   transition: transform 0.4s, box-shadow 0.4s;
@@ -2279,9 +2239,9 @@ margin-bottom: 1.5rem;
 }
 
 .prodotto-card button {
-  padding: 1rem 2rem;
+  padding: 1rem 4rem;
   border-radius: 50px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   color: white;
   border: none;
@@ -2291,14 +2251,20 @@ margin-bottom: 1.5rem;
 }
 
 .prodotto-card button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px #e6e6e6;
 }
+
 .prodotti-grid {
   display: grid;
     grid-template-columns: repeat(3, 1fr);
   gap: 3.5rem;
   margin-top: 4rem;
+}
+.prodotto-card .btn{
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /*STICKY NAVIGATION*/
 .sticky .header {

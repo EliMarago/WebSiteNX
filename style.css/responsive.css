@@ -610,7 +610,23 @@
     padding: 1.6rem 3rem;
     font-size: 1.6rem;
   }
+  .soluzioni-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
   
+  .soluzione-card {
+    padding: 3rem 1.5rem;
+  }
+  
+  .soluzione-icon {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .soluzione-title {
+    font-size: 1.7rem;
+  }
 }
   @media (max-width: 544px) {
     html {
@@ -798,3 +814,4 @@
     padding: 2.5rem 1.5rem;
   }
 }
+
