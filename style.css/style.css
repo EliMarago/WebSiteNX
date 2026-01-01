@@ -2116,11 +2116,8 @@ margin: 2rem 0;
 }
 .address-col a {
   font-weight: 500;
-  transition: color 0.3s;
 }
-.address-col a:hover {
-  color: var(--color-accent);
-}
+
 .address-col address {
   font-size: 1.6rem;
   line-height: 2rem;
