@@ -484,14 +484,6 @@
     .suite-card .heading-tertiary {
       font-size: 2rem;
     }
-    .features-list li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: bold;
-  font-size: 2rem;
-}
 
   .prodotti-grid {
   display: grid;
