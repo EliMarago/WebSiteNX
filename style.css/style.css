@@ -1931,7 +1931,7 @@ margin: 2rem 0;
 =========================== */
 .checkbox {
     margin-bottom: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .checkbox label{
   display: flex;
@@ -1944,12 +1944,12 @@ margin: 2rem 0;
 
 .checkbox input[type="checkbox"] {
   margin-top: 0.3rem;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   flex-shrink: 0;
   accent-color: var(--color-primary);
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 .checkbox a {
   color: var(--color-primary);
@@ -1987,13 +1987,7 @@ margin: 2rem 0;
 .contact-info li{
   font-size: 2rem;
 } 
-.contact-info {
-  list-style: none;
-  font-size: 2.5rem;
-  line-height: 1.8;
-  margin-left: 2rem;
 
-}
 .contact-info a:hover {
   text-decoration: underline;
 }
@@ -2125,8 +2119,10 @@ margin: 2rem 0;
 }
 .contact-info {
   list-style: none;
+  margin-top: 6rem;
   font-size: 1.9rem;
-  line-height: 1.8;
+  line-height: 5;
+  margin-left: 4rem;
 }
 .footer-nav li {
   padding-left: 0;

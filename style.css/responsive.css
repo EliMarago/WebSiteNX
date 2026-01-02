@@ -711,7 +711,7 @@
 }
 .pricing-container {
    grid-template-columns: repeat(1,1fr);
-   width: 380px;
+   width: 360px;
   }
    .section-timeline {
     padding: 6rem 0;
@@ -773,7 +773,7 @@
  }
     .pricing-container{
     grid-template-columns: repeat(1,1fr);
-    width: 680px;
+    width: 650px;
   }
   .contact-form-box {
       padding: 3rem 3rem;
