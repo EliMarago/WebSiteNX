@@ -525,7 +525,7 @@
     left: 30px;
     width: 60px;
     height: 60px;
-    transform: translate(-50%, -550%);
+    transform: translate(-50%, -450%);
   }
 
   .timeline-icon ion-icon {
@@ -615,6 +615,9 @@
   .soluzione-title {
     font-size: 1.7rem;
   }
+  .timeline-image {
+    width: 90%;
+}
 
   /* === FEATURES === */
   .feature img {
@@ -824,8 +827,11 @@
 
   /* === TIMELINE === */
   .timeline-icon {
-    transform: translate(-50%, -350%);
+    transform: translate(-50%, -250%);
   }
+  .timeline-image {
+    width: 90%;
+}
 }
 
 /* ===========================
@@ -833,7 +839,7 @@
 =========================== */
 @media (max-width: 480px) {
   .dati-header .heading-secondary {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   .subheading-intro {
