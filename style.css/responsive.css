@@ -282,7 +282,10 @@
     .checkbox label{
     font-size: 1.6rem;
   }
-
+  .prodotto-card.active .prodotto-dettagli{
+    margin-top: 3rem;
+    padding: 1rem;
+  }
 }
 @media (max-width:  768px) {
     html {

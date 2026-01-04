@@ -2228,7 +2228,7 @@ margin-bottom: 1.5rem;
   background: rgba(255, 255, 255, 0.08); 
   backdrop-filter: blur(10px); 
   border-radius: 2rem;
-  padding: 6rem 4rem;
+  padding: 7rem 6rem;
   text-align: center;
   box-shadow: 0 8px 25px rgb(0 0 0 / 9%);
   transition:
@@ -2270,6 +2270,7 @@ margin-bottom: 1.5rem;
 
 .prodotto-card button {
   bottom: 0.5rem;
+  margin-bottom: 3rem;
   padding: 1rem 4rem;
   border-radius: 50px;
   font-size: 1.8rem;
@@ -2293,7 +2294,6 @@ margin-bottom: 1.5rem;
 }
 .prodotto-card .btn{
   position: absolute;
-  bottom: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
