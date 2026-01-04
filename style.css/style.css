@@ -1356,6 +1356,7 @@ body {
   width: 90%;
   position: relative;
   z-index: 1;
+
 }
 
 .event-badge{
@@ -2230,7 +2231,11 @@ margin-bottom: 1.5rem;
   padding: 6rem 4rem;
   text-align: center;
   box-shadow: 0 8px 25px rgb(0 0 0 / 9%);
-  transition: transform 0.4s, box-shadow 0.4s;
+  transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+  position: relative;
+  overflow: hidden;
 }
 .img-container img{
   width: 100%;
@@ -2264,6 +2269,7 @@ margin-bottom: 1.5rem;
 }
 
 .prodotto-card button {
+  bottom: 0.5rem;
   padding: 1rem 4rem;
   border-radius: 50px;
   font-size: 1.8rem;
@@ -2291,6 +2297,62 @@ margin-bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
+.prodotto-dettagli {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.6s ease,
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+.prodotto-card.active .prodotto-dettagli {
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: 2.5rem;
+}
+.prodotto-features {
+  list-style: none;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 56, 112, 0.15);
+  margin-top: 2rem;
+}
+.prodotto-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem; 
+  padding-left: 0;
+  font-size: 1.6rem;
+  transform: translateX(-10px);
+  color: var(--color-primary);
+  transition:
+  opacity 0.4s ease,
+  transform 0.4s ease;
+}
+.prodotto-features li::before {
+  content: "✓";
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.prodotto-card.active {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 56, 112, 0.25);
+}
+
+.prodotto-card.active .prodotto-features li:nth-child(1) { transition-delay: 0.1s; }
+.prodotto-card.active .prodotto-features li:nth-child(2) { transition-delay: 0.2s; }
+.prodotto-card.active .prodotto-features li:nth-child(3) { transition-delay: 0.3s; }
+.prodotto-card.active .prodotto-features li:nth-child(4) { transition-delay: 0.4s; }
+
+.prodotto-toggle {
+  transition: all 0.4s ease;
+}
+
+
+
 /*STICKY NAVIGATION*/
 .sticky .header {
   position: fixed;
@@ -2338,10 +2400,4 @@ margin-bottom: 1.5rem;
   transform: translateX(10px);
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
-
-
-
-
-
-
 

@@ -1458,3 +1458,23 @@
     margin-bottom: 6rem;
   }
 }
+
+.product-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-details li {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  padding-left: 2.4rem;
+  position: relative;
+}
+
+.product-details li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary-light);
+  font-weight: bold;
+}

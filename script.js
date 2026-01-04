@@ -270,3 +270,27 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".prodotto-toggle");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".prodotto-card");
+      const isOpen = card.classList.contains("active");
+
+      // Chiude tutte le card
+      document.querySelectorAll(".prodotto-card").forEach(c => {
+        c.classList.remove("active");
+        const b = c.querySelector(".prodotto-toggle");
+        if (b) b.innerText = "Scopri di più";
+      });
+
+      // Apre quella cliccata
+      if (!isOpen) {
+        card.classList.add("active");
+        btn.innerText = "Chiudi";
+      }
+    });
+  });
+});
