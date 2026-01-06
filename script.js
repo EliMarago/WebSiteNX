@@ -294,3 +294,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//CAPTCHA
+const form = document.querySelector('.contact-form');
+if (form) {
+  const startTime = Date.now();
+  document.getElementById('formStartTime').value = startTime;
+
+  form.addEventListener('submit', e => {
+    const honeypot = document.getElementById('company').value;
+    const elapsed = Date.now() - startTime;
+
+    if (honeypot !== '' || elapsed < 3000) {
+      e.preventDefault();
+      console.warn('Invio bloccato (spam)');
+    }
+  });
+}
