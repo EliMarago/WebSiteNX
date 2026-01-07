@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nemesix - NemPOS</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/logo-footer.png" />
+  <script src="https://kit.fontawesome.com/439883d3d6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css/style.css" />
+  <link rel="stylesheet" href="style.css/rtPos.css">
+  <link rel="stylesheet" href="style.css/modal.css">
+  <link rel="stylesheet" href="style.css/animation.css">
+  <link rel="stylesheet" href="style.css/cookie.css">
+  <link rel="stylesheet" href="style.css/responsive.css">
+  
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo-box">
+      <img class="logo" src="img/logo-header.png" alt="NemPOS logo" />
+    </a>
+    
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+       <li><a class="main-nav-link home" href="#home">Home</a></li>
+        <li><a class="main-nav-link" href="#prodotti">Prodotti</a></li>
+        <li><a class="main-nav-link" href="#soluzioni">Soluzioni</a></li>
+        <li><a class="main-nav-link" href="#vantaggi">Vantaggi</a></li>
+        <li><a class="main-nav-link" href="#news">News</a></li>
+        <li><a class="main-nav-link" href="#licenze">Licenze</a></li>
+        <li><a class="main-nav-link nav-cta" href="#contatti">Richiedi demo</a></li>
+      </ul>
+      
+      <!-- Sezione Social nel menu mobile -->
+      <div class="mobile-nav-footer">
+        <p class="mobile-nav-title">Seguici</p>
+        <div class="mobile-social-links">
+          <a href="https://www.instagram.com/nempossuite" target="_blank" aria-label="Instagram" class="mobile-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/>
+              <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/>
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/nemesixsrl" target="_blank" aria-label="Facebook" class="mobile-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"/>
+            </svg>
+          </a>
+          <a href="https://it.linkedin.com/in/nemesixsrlsistemidicassa" target="_blank" aria-label="Linkedin" class="mobile-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 666 680">
+              <path d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/>
+            </svg>
+          </a>
+          <a href="mailto:info@nemesix.it" aria-label="Email" class="mobile-social-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </a>
+        </div>
+        
+        <!-- Info contatti -->
+        <div class="mobile-contact-info">
+          <a href="tel: +390595966659" class="mobile-contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +39 059 59 666 59
+          </a>
+          <a href="mailto:info@nemesix.it" class="mobile-contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            info@nemesix.it
+          </a>
+        </div>
+      </div>
+    </nav>
+    
+    <button class="btn-mobile-nav" aria-label="Menu">
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </header>
+  
+  <div class="nav-overlay"></div>
+
+
+  <!-- Hero Article -->
+  <section class="article-hero">
+    <div class="article-hero-content">
+      <span class="article-category">📋 Normative</span>
+      <h1 class="article-title">
+        Nuove Normative Fiscali 2025: Cosa Cambia per i Registratori di Cassa
+      </h1>
+      <div class="article-meta">
+        <div class="article-meta-item">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span>5 Gennaio 2025</span>
+        </div>
+        <div class="article-meta-item">
+          <ion-icon name="time-outline"></ion-icon>
+          <span>8 min di lettura</span>
+        </div>
+        <div class="article-meta-item">
+          <ion-icon name="person-outline"></ion-icon>
+          <span>Redazione NemPOS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Image -->
+  <div class="article-featured-image">
+    <img src="https://images.unsplash.com/photo-1554224311-beee460ae6ba?w=1200" alt="Normative fiscali">
+  </div>
+
+  <!-- Article Content -->
+  <article class="article-container">
+    <div class="article-content">
+      
+      <p>
+        Con l'inizio del 2025, l'Agenzia delle Entrate ha introdotto <strong>nuovi requisiti tecnici e normativi</strong> per i registratori di cassa telematici. Questi cambiamenti rappresentano un passo importante verso una maggiore trasparenza fiscale e una digitalizzazione completa del settore retail.
+      </p>
+
+      <div class="highlight-box">
+        <p>
+          ⚠️ <strong>Importante:</strong> Le nuove normative entrano in vigore dal 1° marzo 2025. Assicurati che il tuo sistema sia aggiornato entro questa data per evitare sanzioni.
+        </p>
+      </div>
+
+      <h2>Principali Novità delle Normative 2025</h2>
+
+      <p>
+        Le modifiche introdotte riguardano principalmente tre aspetti fondamentali della gestione fiscale:
+      </p>
+
+      <h3>1. Trasmissione Dati in Tempo Reale</h3>
+      <p>
+        A partire da marzo 2025, tutti i registratori di cassa dovranno essere in grado di trasmettere i dati delle transazioni all'Agenzia delle Entrate <strong>in tempo reale</strong>, entro massimo 12 ore dalla chiusura giornaliera.
+      </p>
+
+      <ul>
+        <li>Invio telematico automatico dei corrispettivi</li>
+        <li>Backup locale obbligatorio per 5 anni</li>
+        <li>Crittografia avanzata dei dati trasmessi</li>
+      </ul>
+
+      <h3>2. Nuovi Requisiti Tecnici</h3>
+      <p>
+        I dispositivi dovranno essere dotati di:
+      </p>
+
+      <ol>
+        <li><strong>Modulo di firma digitale</strong> per garantire l'autenticità dei documenti fiscali</li>
+        <li><strong>Sistema di timestamping</strong> certificato per la marcatura temporale</li>
+        <li><strong>Connettività Internet stabile</strong> con sistema di backup automatico</li>
+        <li><strong>Memoria interna sicura</strong> per lo storage locale dei dati</li>
+      </ol>
+
+      <div class="article-quote">
+        "La digitalizzazione del sistema fiscale rappresenta un'opportunità per modernizzare il business e ridurre gli errori amministrativi" - Agenzia delle Entrate
+      </div>
+
+      <h3>3. Obblighi per i Commercianti</h3>
+      <p>
+        I titolari di attività commerciali dovranno:
+      </p>
+
+      <ul>
+        <li>Aggiornare i registratori esistenti o sostituirli con modelli conformi</li>
+        <li>Formare il personale sull'utilizzo dei nuovi sistemi</li>
+        <li>Conservare i backup secondo le nuove modalità previste</li>
+        <li>Effettuare controlli periodici sulla funzionalità dei dispositivi</li>
+      </ul>
+
+      <h2>Come Prepararsi al Cambiamento</h2>
+
+      <p>
+        <strong>NemPOS è già conforme</strong> a tutte le nuove normative 2025. I nostri sistemi sono progettati per garantire la massima compliance fiscale e includono:
+      </p>
+
+      <ul>
+        <li>✅ Trasmissione telematica automatica dei corrispettivi</li>
+        <li>✅ Backup cloud sicuro e certificato</li>
+        <li>✅ Aggiornamenti software gratuiti per mantenere la conformità</li>
+        <li>✅ Assistenza dedicata per la migrazione al nuovo sistema</li>
+      </ul>
+
+      <h2>Sanzioni in Caso di Non Conformità</h2>
+
+      <p>
+        L'Agenzia delle Entrate ha previsto sanzioni per chi non si adegua entro i termini stabiliti:
+      </p>
+
+      <ul>
+        <li>Da €1.000 a €4.000 per mancata trasmissione dei dati</li>
+        <li>Da €500 a €2.000 per trasmissioni incomplete o errate</li>
+        <li>Sospensione dell'attività in caso di reiterazione delle violazioni</li>
+      </ul>
+
+      <div class="highlight-box">
+        <p>
+          💡 <strong>Consiglio:</strong> Non aspettare l'ultimo momento! Contattaci oggi per verificare la conformità del tuo sistema e ricevere assistenza gratuita per l'aggiornamento.
+        </p>
+      </div>
+
+      <h2>Conclusioni</h2>
+
+      <p>
+        Le nuove normative fiscali 2025 rappresentano un passo avanti verso la digitalizzazione completa del settore retail in Italia. Con i giusti strumenti e partner tecnologici, questa transizione può diventare un'opportunità per migliorare l'efficienza operativa e ridurre gli oneri amministrativi.
+      </p>
+
+      <!-- Tags -->
+      <div class="article-tags">
+        <div class="tags-title">Tag Articolo</div>
+        <div class="tags-list">
+          <a href="#" class="tag">#Normative</a>
+          <a href="#" class="tag">#Fiscalità</a>
+          <a href="#" class="tag">#POS</a>
+          <a href="#" class="tag">#AggiornamentoSoftware</a>
+          <a href="#" class="tag">#Retail</a>
+        </div>
+      </div>
+
+      <!-- Share -->
+      <div class="article-share">
+        <div class="share-title">Condividi questo articolo</div>
+        <div class="share-buttons">
+          <a href="#" class="share-btn share-facebook" title="Condividi su Facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="#" class="share-btn share-twitter" title="Condividi su Twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a href="#" class="share-btn share-linkedin" title="Condividi su LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a href="#" class="share-btn share-whatsapp" title="Condividi su WhatsApp">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+          <a href="#" class="share-btn share-email" title="Condividi via Email">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- Related Articles -->
+  <section class="related-section">
+    <h2 class="related-title">Articoli Correlati</h2>
+    <div class="related-grid">
+      
+      <a href="#" class="related-card">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400" alt="AI nel retail">
+        <div class="related-content">
+          <p class="related-date">28 Dicembre 2024</p>
+          <h3 class="related-card-title">L'Intelligenza Artificiale nei Sistemi di Cassa</h3>
+        </div>
+      </a>
+
+      <a href="#" class="related-card">
+        <img src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=400" alt="Pagamenti">
+        <div class="related-content">
+          <p class="related-date">20 Dicembre 2024</p>
+          <h3 class="related-card-title">Pagamenti Contactless: +67% nel 2024</h3>
+        </div>
+      </a>
+
+      <a href="#" class="related-card">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="Cloud">
+        <div class="related-content">
+          <p class="related-date">15 Dicembre 2024</p>
+          <h3 class="related-card-title">I Vantaggi del Cloud per il Retail</h3>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title">Vuoi assicurarti che il tuo sistema sia conforme?</h2>
+      <p class="cta-text">
+        Contattaci per una consulenza gratuita e scopri come NemPOS può aiutarti ad adeguarti alle nuove normative senza stress.
+      </p>
+      <a href="index.html#contatti" class="btn-cta">
+        Richiedi Consulenza Gratuita
+        <ion-icon name="arrow-forward"></ion-icon>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+  <footer class="footer">
+    <div class="container grid grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img src="img/logoFooter_White.png" alt="NemPOS logo" />
+        </a>
+      </div>
+      
+      <div class="address-col">
+        <p style="font-weight: 600; font-size: 1.9rem; margin-bottom: 1.6rem;">Contatti</p>
+        <address style="font-style: normal; font-size: 1.8rem; line-height: 2;">
+          <p>Via Zappiano, 1C<br>41012, Carpi (MO)</p>
+          <p><a href="tel:+39020000000">+39 059 59 666 59</a><br />
+            <a href="mailto:info@nemesix.it">info@nemesix.it</a></p>
+          <p>P.IVA \ C.F. 03099200366
+          </p>
+          <div class="icons-container">
+            <div class="container-icon">
+ 
+                 <a href="https://www.instagram.com/nempossuite" target="_blank" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon"  viewBox="0 0 512 512">
+                  <path d="M349.33 69.33a93.62 93.62 0 0193.34 93.34v186.66a93.62 93.62 0 01-93.34 93.34H162.67a93.62 93.62 0 01-93.34-93.34V162.67a93.62 93.62 0 0193.34-93.34h186.66m0-37.33H162.67C90.8 32 32 90.8 32 162.67v186.66C32 421.2 90.8 480 162.67 480h186.66C421.2 480 480 421.2 480 349.33V162.67C480 90.8 421.2 32 349.33 32z"/>
+                  <path d="M377.33 162.67a28 28 0 1128-28 27.94 27.94 0 01-28 28zM256 181.33A74.67 74.67 0 11181.33 256 74.75 74.75 0 01256 181.33m0-37.33a112 112 0 10112 112 112 112 0 00-112-112z"/>
+                </svg>
+              </a>
+              <a href="https://www.facebook.com/nemesixsrl" target="_blank" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon s-ion-icon" viewBox="0 0 512 512">
+                  <path d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"/>
+                </svg>
+              </a>
+              <a href="https://it.linkedin.com/in/nemesixsrlsistemidicassa?trk=public_post_follow-view-profile" target="_blank" aria-label="Linkedin">
+                <svg xmlns="http://www.w3.org/2000/svg"  class="ionicon s-ion-icon"  viewBox="0 0 666 680"><path fill="currentColor" d="M0 98v498c0 47 37 84 84 84h498c23 0 45-11 59-25c15-15 25-34 25-59V98c0-47-37-84-84-84H84c-25 0-44 10-59 25C11 53 0 75 0 98zm90 66c0-32 26-60 58-60c33 0 60 28 60 60c0 33-27 59-60 59c-32 0-58-26-58-59zm161 411V270c0-7 7-13 12-13h85c12 0 12 14 12 23c24-24 55-30 87-30c78 0 128 37 128 119v206c0 7-6 13-12 13h-88c-7 0-12-7-12-13V389c0-31-9-48-44-48c-44 0-55 29-55 68v166c0 7-7 13-14 13h-87c-5 0-12-7-12-13zm-159 0V270c0-7 7-13 12-13h87c8 0 13 5 13 13v305c0 7-6 13-13 13h-87c-6 0-12-7-12-13z"/></svg>
+
+              </a>
+              <a href="mailto:info@nemesix.it"
+              aria-label="Email"
+              class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+                    <rect width="18" height="14" x="3" y="5" stroke-dasharray="64" stroke-dashoffset="64" rx="1">
+                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/>
+                    </rect>
+                    <path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5L12 12L21 6.5">
+                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.4s" values="24;0"/>
+                    </path>
+                </g>
+            </svg>
+           
+           </a>
+            </div>
+        </div>
+        </address>
+        <div class="footer-bottom">
+          <p>© 2025 Nemesix S.r.l. — Tutti i diritti riservati</p>
+        </div>
+      </div>
+      
+      
+      <div class="nav-col">
+        <p style="font-weight: 600; font-size: 1.9rem; margin-bottom: 1.7rem;">Link utili</p>
+        <ul class="footer-nav">
+            <li><a class="footer-link" href="privacy.html">Privacy Policy</a></li>
+            <li><a class="footer-link" href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a class="footer-link" href="cookie-policy.html" id="manageCookies">Gestisci Cookie</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script src="cookie.js"></script>
+
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <p>
+          🍪  Questo sito utilizza cookie tecnici e, previo consenso, cookie di profilazione.
+          Puoi accettare o rifiutare i cookie non necessari.
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn btn-reject" id="rejectAll">
+          Solo necessari
+        </button>
+        <button class="cookie-btn btn-accept" id="acceptAll">
+          Accetta
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

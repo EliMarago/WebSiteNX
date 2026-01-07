@@ -29,6 +29,10 @@
   .soluzioni-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+    .timeline-image img{
+      width: 80%;
+      max-width: 500px;
+}
 }
 
 /* ===========================
@@ -301,6 +305,9 @@
   .checkbox label {
     font-size: 1.6rem;
   }
+    .timeline-image img{
+    width: 100%;
+}
 }
 
 /* ===========================
@@ -348,6 +355,15 @@
   .prodotti-grid{
     grid-template-columns: repeat(2, 1fr);
   }
+    .contact-form-box {
+    padding: 3rem 3rem;
+    width: auto;
+    margin-left: 5rem;
+  }
+    }
+    .timeline-image img{
+    width: 100%;
+
 }
 
 /* ===========================
@@ -557,11 +573,13 @@
 
   .timeline-image {
     width: calc(100% - 100px);
-    margin-left: 90px;
+    margin-left: 80px;
   }
 
   .timeline-image img {
-    width: 80%;
+    width: 110%;
+    max-width: none;
+    margin-left: -5%;
   }
 
   .timeline-item {
@@ -617,7 +635,7 @@
   .soluzione-title {
     font-size: 1.7rem;
   }
-  .timeline-image {
+  .timeline-image img {
     width: 90%;
 }
 
@@ -770,6 +788,7 @@
 
   .hero-description.info {
     text-align: center;
+    font-size: 2.2rem;
   }
 
   .hero-stats {
@@ -832,8 +851,8 @@
   .timeline-icon {
     transform: translate(-50%, -250%);
   }
-  .timeline-image {
-    width: 90%;
+  .timeline-image img{
+    width: 100%;
 }
 }
 
@@ -856,4 +875,7 @@
   .stat-card {
     padding: 2.5rem 1.5rem;
   }
+    .timeline-image img{
+    width: 100%;
+}
 }
