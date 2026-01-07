@@ -125,9 +125,11 @@
     }
 
     .article-featured-image img {
-      width: 100%;
+      width: 40%;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      margin-top: 5rem;
+      margin-left: 30%;
     }
 
     /* Content */
@@ -427,5 +429,12 @@
 
       .share-buttons {
         flex-wrap: wrap;
+      }
+      .article-featured-image img {
+        width: 90%;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        margin-top: 5rem;
+        margin-left: 3%;
       }
     }
