@@ -29,6 +29,9 @@
   .soluzioni-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+    .timeline-image img{
+    width: 100%;
+}
 }
 
 /* ===========================
@@ -301,6 +304,9 @@
   .checkbox label {
     font-size: 1.6rem;
   }
+    .timeline-image img{
+    width: 100%;
+}
 }
 
 /* ===========================
@@ -348,6 +354,10 @@
   .prodotti-grid{
     grid-template-columns: repeat(2, 1fr);
   }
+    }
+    .timeline-image img{
+    width: 100%;
+
 }
 
 /* ===========================
@@ -557,11 +567,11 @@
 
   .timeline-image {
     width: calc(100% - 100px);
-    margin-left: 90px;
+    margin-left: 80px;
   }
 
   .timeline-image img {
-    width: 80%;
+    width: 90%;
   }
 
   .timeline-item {
@@ -617,7 +627,7 @@
   .soluzione-title {
     font-size: 1.7rem;
   }
-  .timeline-image {
+  .timeline-image img {
     width: 90%;
 }
 
@@ -832,8 +842,8 @@
   .timeline-icon {
     transform: translate(-50%, -250%);
   }
-  .timeline-image {
-    width: 90%;
+  .timeline-image img{
+    width: 100%;
 }
 }
 
@@ -856,4 +866,7 @@
   .stat-card {
     padding: 2.5rem 1.5rem;
   }
+    .timeline-image img{
+    width: 100%;
+}
 }

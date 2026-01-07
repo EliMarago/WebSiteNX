@@ -427,7 +427,7 @@
 
       <div class="dati-image">
         <div class="image-wrapper">
-          <img src="img/inventory.jpg" alt="Dashboard NemPOS con analisi dati in tempo reale" />
+          <img src="img/inventory.png" alt="Dashboard NemPOS con analisi dati in tempo reale" />
           <div class="image-glow"></div>
         </div>
       </div>
@@ -883,26 +883,28 @@
     </div>
       
       <div class="contact-form-box">
-        <form class="contact-form">
+        <form action="https://formspree.io/f/xykzrwgo" method="POST"
+         class="contact-form">
           <!-- Honeypot captcha -->
         <input type="text" name="company" id="company" tabindex="-1" autocomplete="off">
         <input type="hidden" id="formStartTime">
 
           <div>
             <label for="name">Nome</label>
-            <input id="name" type="text" required placeholder="Il tuo nome" />
+            <input id="name" name="name" type="text" placeholder="Il tuo nome"  required/>
           </div>
           <div>
+              <input type="hidden" name="_subject" value="Nuova richiesta dal sito Nemesix">
             <label for="email">Email</label>
-            <input id="email" type="email" required placeholder="nome@email.com" />
+            <input id="email" name="email" type="email" required placeholder="nome@email.com" />
           </div>
              <div>
-            <label for="telefono">Telefono</label>
-            <input id="phone-number" type="phone-number" required placeholder="Numero di telefono" />
+            <label for="number">Telefono</label>
+            <input id="number" name="number" type="phone-number" required placeholder="Numero di telefono" />
           </div>
           <div>
             <label for="message">Messaggio</label>
-            <textarea id="message" rows="5" required placeholder="Scrivi il tuo messaggio..."></textarea>
+            <textarea id="message" name="message" rows="5" required placeholder="Scrivi il tuo messaggio..."></textarea>
           </div>
        <div class="checkbox">
         <label>

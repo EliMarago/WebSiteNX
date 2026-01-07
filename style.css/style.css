@@ -1228,6 +1228,7 @@ body {
   padding: 2rem;
 }
 .timeline-image img{
+  width: 90%;
   border-radius: 5%;
 }
 .timeline-item:nth-child(odd) .timeline-image {
