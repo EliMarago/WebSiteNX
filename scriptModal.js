@@ -4,17 +4,36 @@ document.addEventListener('DOMContentLoaded', () => {
   
     if (!form || !successBox) return;
   
-    form.addEventListener('submit', (e) => {
-      e.preventDefault(); // blocca invio reale
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
   
-      // Nasconde il form
-      form.style.display = 'none';
+      const formData = new FormData(form);
   
-      // Mostra messaggio di conferma
-      successBox.style.display = 'flex';
+      try {
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        });
   
-      // Scroll morbido verso il messaggio (mobile friendly)
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Nasconde il form
+        form.style.display = 'none';
+        
+  
+        // Mostra il messaggio di successo
+        successBox.style.display = 'flex';
+  
+        // Scroll verso il messaggio
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  
+        // ⏳ Aspetta 2 secondi e ricarica la pagina
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+  
+      } catch (error) {
+        console.error("Errore nell'invio del form:", error);
+      }
     });
   });
   

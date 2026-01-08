@@ -349,15 +349,3 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Gestione invio form
-const contactForm = document.querySelector('.contact-form-modal');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    // Il form verrà gestito da Netlify
-    setTimeout(() => {
-      contactModal.classList.remove('active');
-      document.body.style.overflow = '';
-      alert('Grazie per averci contattato! Ti risponderemo entro 24 ore.');
-    }, 100);
-  });
-}
