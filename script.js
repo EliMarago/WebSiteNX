@@ -311,3 +311,53 @@ if (form) {
     }
   });
 }
+
+// Modal Contatti
+const contactModal = document.getElementById('contactModal');
+const openModalBtn1 = document.getElementById('openContactModal');
+const closeModalBtn = document.getElementById('closeContactModal');
+
+// Apri modal
+if (openModalBtn1) {
+  openModalBtn1.addEventListener('click', () => {
+    contactModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Blocca scroll della pagina
+  });
+}
+
+// Chiudi modal
+if (closeModalBtn) {
+  closeModalBtn.addEventListener('click', () => {
+    contactModal.classList.remove('active');
+    document.body.style.overflow = ''; // Ripristina scroll
+  });
+}
+
+// Chiudi modal cliccando fuori
+contactModal.addEventListener('click', (e) => {
+  if (e.target === contactModal) {
+    contactModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+// Chiudi modal con tasto ESC
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && contactModal.classList.contains('active')) {
+    contactModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
+// Gestione invio form
+const contactForm = document.querySelector('.contact-form-modal');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    // Il form verrà gestito da Netlify
+    setTimeout(() => {
+      contactModal.classList.remove('active');
+      document.body.style.overflow = '';
+      alert('Grazie per averci contattato! Ti risponderemo entro 24 ore.');
+    }, 100);
+  });
+}
