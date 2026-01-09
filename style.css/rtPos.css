@@ -442,6 +442,10 @@
   opacity: 1;
   visibility: visible;
 }
+.modal-overlay.no-blur {
+  backdrop-filter: none;
+  background: transparent;
+}
 
 /* Modal Container */
 .modal-contact {
@@ -809,7 +813,7 @@
   font-weight: 600;
 }
 
-@keyframes fadeInUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -818,6 +822,36 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.success-message-box {
+  background: linear-gradient(135deg, rgba(0, 208, 132, 0.1), rgba(0, 208, 132, 0.15));
+  border-left: 4px solid #00d084;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+}
+.success-message-box ion-icon {
+  font-size: 6rem;
+  color: #00d084;
+  margin-bottom: 1.5rem;
+  animation: scaleIn 0.5s ease;
+}
+.success-message-box h3 {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.success-message-box p {
+  font-size: 1.7rem;
+  color: #1f7a57;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.success-message-box strong {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 /* Info Box */
@@ -876,23 +910,95 @@
 }
 .messaggio-invio{
   display: none;
+  padding: 3rem;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+/* ========== SUCCESS MESSAGE CONTAINER ========== */
+.success-message-container {
+  display: none; /* Nascosto di default */
+  padding: 3rem;
+  text-align: center;
 }
 
-.form-success {
-  display: none;
-  margin-top: 3rem;
-  padding: 2rem 2.5rem;
+.success-message-container.show {
+  display: block; /* Mostrato quando ha classe .show */
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== SUCCESS MESSAGE BOX ========== */
+.success-message-box {
   background: linear-gradient(135deg, rgba(0, 208, 132, 0.1), rgba(0, 208, 132, 0.15));
   border-left: 4px solid #00d084;
+  padding: 3rem 2.5rem;
   border-radius: 12px;
-  font-size: 1.6rem;
-  color: #1f7a57;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  /* Non mettere display: none qui! */
 }
 
-.form-success ion-icon {
-  font-size: 3rem;
+.success-message-box ion-icon {
+  font-size: 6rem;
   color: #00d084;
+  margin-bottom: 1.5rem;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.success-message-box h3 {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.success-message-box p {
+  font-size: 1.7rem;
+  color: #1f7a57;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.success-message-box strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .success-message-container {
+    padding: 2rem;
+  }
+
+  .success-message-box {
+    padding: 2.5rem 2rem;
+  }
+
+  .success-message-box h3 {
+    font-size: 2rem;
+  }
+
+  .success-message-box p {
+    font-size: 1.5rem;
+  }
 }
