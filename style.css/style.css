@@ -124,7 +124,7 @@ body {
 }
 .btn-mobile-nav {
   border: none;
-  background-color: #dddcdc;
+  background-color: #e3e3e3;
   color: var(--color-accent);
   cursor: pointer;
   display: none;
@@ -139,7 +139,7 @@ body {
 }
 
 .btn-mobile-nav:hover {
-  background: #ccc;
+  background: rgb(221, 220, 220);
   transform: scale(1.05);
 }
 .btn-mobile-nav:active {
