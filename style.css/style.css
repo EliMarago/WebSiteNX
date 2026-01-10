@@ -1271,12 +1271,9 @@ body {
   text-align: center;
 
   transition: all 0.3s ease;
-  cursor: pointer;
+
 }
 
-.soluzione-card:hover {
-  transform: translateY(-8px);
-}
 
 .soluzione-icon {
   width: 8rem;
@@ -1284,11 +1281,6 @@ body {
   color: var(--color-primary);
   margin-bottom: 2rem;
   transition: all 0.3s ease;
-}
-
-.soluzione-card:hover .soluzione-icon {
-  color: var(--color-accent);
-  transform: scale(1.1);
 }
 
 .soluzione-title {
@@ -1561,7 +1553,6 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
   overflow: hidden;
-  cursor: pointer;
 }
 
 /* Bordi colorati diversi */
@@ -2067,7 +2058,19 @@ margin: 2rem 0;
 .grid--footer {
   grid-template-columns: 1.5fr 1fr 1fr;
 }
-
+.logo-col {
+  display: flex;
+  align-items: center;
+  margin-left: -10rem;
+}
+.footer-logo img:last-child {
+  height: 58px;
+  width: auto;
+  display: block;
+  opacity: 0.6;
+  margin-top: -3rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 .footer-logo img {
   height: 128px;
   display: inline-block;
@@ -2076,7 +2079,12 @@ margin: 2rem 0;
   margin-left: 100px;
   opacity: 70%;
 }
-
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
 .footer-nav {
   list-style: none;
   display: flex;
@@ -2580,4 +2588,26 @@ margin-bottom: 1.5rem;
   .news-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/*invio form  */
+.form-success-message {
+  background: #ffffff;
+  border: 2px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeInUp 0.6s ease;
+}
+
+.form-success-message h3 {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.form-success-message p {
+  font-size: 1.6rem;
+  color: #555;
 }

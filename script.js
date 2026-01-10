@@ -349,3 +349,40 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.contact-form');
+  const success = document.getElementById('formSuccess');
+
+  if (!form || !success) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); // BLOCCA Netlify redirect
+
+    const button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = 'Invio in corso...';
+
+    const formData = new FormData(form);
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      // SUCCESSO
+      form.style.display = 'none';
+      success.style.display = 'block';
+
+      success.scrollIntoView({ behavior: 'smooth' });
+
+    } catch (err) {
+      button.disabled = false;
+      button.textContent = 'Invia messaggio';
+      alert('Errore durante l’invio. Riprova.');
+    }
+  });
+});

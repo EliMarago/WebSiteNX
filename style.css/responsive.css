@@ -360,11 +360,18 @@
     width: auto;
     margin-left: 5rem;
   }
+  .logo-col {
+    display: flex;
+    align-items: center;
+    margin-left: -10rem;
+  }
+  
     }
     .timeline-image img{
     width: 100%;
+  }
 
-}
+
 
 /* ===========================
    MOBILE - 768px
@@ -373,7 +380,16 @@
   html {
     font-size: 50%;
   }
-
+  .footer-logo img:first-child {
+    height: 100px;
+  }
+  .footer-logo img:last-child {
+    height: 60px;
+  }
+  
+  .footer-logo {
+    gap: 1.5rem;
+  }
   /* === HEADER === */
   .header {
     height: 7rem;
@@ -638,6 +654,11 @@
   .timeline-image img {
     width: 90%;
 }
+.logo-col {
+  display: flex;
+  align-items: center;
+  margin-left: -3rem;
+}
 
   /* === FEATURES === */
   .feature img {
@@ -686,11 +707,13 @@
   /* === PRICING === */
   .pricing-container {
     grid-template-columns: 1fr;
-    width: 680px;
+    max-width: 650px; /* Limita larghezza */
+    margin: 0 auto;
+    padding: 2rem;
   }
 
   .pricing-card {
-    padding: 4rem 5rem;
+    padding: 3.5rem 3rem;
   }
 
   /* === CONTACT === */

@@ -639,7 +639,7 @@
 
  <section class="section-prodotti" id="prodotti">
     <div class="container">
-      <h2 class="heading-secondary">I nostri prodotti</h2>
+      <h2 class="heading-secondary">Componenti Hardware</h2>
       <p class="subheading">Una suite completa per la gestione del tuo business.</p>
   
       <div class="prodotti-grid">
@@ -907,8 +907,13 @@
     </div>
       
       <div class="contact-form-box">
-        <form name="contact" netlify
-         class="contact-form">
+        <form name="contact-article"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="company"
+        class="contact-form">
+        <input type="hidden" name="form-name" value="contact">
+
          
           <!-- Honeypot captcha -->
         <input type="text" name="company" id="company" tabindex="-1" autocomplete="off">
@@ -939,6 +944,14 @@
           </div>
           <button type="submit" class="btn btn--full-enter">Invia messaggio</button>
         </form>
+        <div class="form-success-message" id="formSuccess" style="display: none;">
+          <h3>✅ Messaggio inviato!</h3>
+          <p>
+            Grazie per averci contattato.<br>
+            Ti risponderemo entro <strong>24 ore</strong>.
+          </p>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -969,6 +982,7 @@
       <div class="logo-col">
         <a href="#" class="footer-logo">
           <img src="img/logoFooter_White.png" alt="NemPOS logo" />
+          <img src="img/Nempos_logo_oriz - bianco.png" alt="Nempos logo">
         </a>
       </div>
       
