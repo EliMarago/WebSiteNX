@@ -942,17 +942,20 @@
           Accetto l'<a href="privacy.html" target="_blank">Informativa Privacy</a>: vi informiamo che i dati conferiti saranno trattati con mezzi informatici nel rispetto dei principi stabiliti dalla normativa vigente in materia di protezione di dati (Regolamento UE n. 679 del 2016) al solo fine di fornirle le informazioni richieste.
         </label>
           </div>
-          <button type="submit" class="btn btn--full-enter">Invia messaggio</button>
+          <button type="submit" id="sendForm" class="btn btn--full-enter">Invia messaggio</button>
         </form>
-        <div class="form-success-message" id="formSuccess" style="display: none;">
-          <h3>✅ Messaggio inviato!</h3>
-          <p>
-            Grazie per averci contattato.<br>
-            Ti risponderemo entro <strong>24 ore</strong>.
-          </p>
+        <div class="form-overlay" id="formOverlay">
+          <div class="form-overlay-content">
+            <div class="check-icon">✓</div>
+            <h3>Messaggio inviato</h3>
+            <p>Grazie per averci contattato.<br>Ti risponderemo entro 24 ore.</p>
+            <button type="button" class="btn btn--full-enter" id="resetForm">
+              Invia un’altra richiesta
+            </button>
+          </div>
         </div>
-        
       </div>
+      
     </div>
   </section>
  

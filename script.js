@@ -312,55 +312,16 @@ if (form) {
   });
 }
 
-// Modal Contatti
-const contactModal = document.getElementById('contactModal');
-const openModalBtn1 = document.getElementById('openContactModal');
-const closeModalBtn = document.getElementById('closeContactModal');
-
-// Apri modal
-if (openModalBtn1) {
-  openModalBtn1.addEventListener('click', () => {
-    contactModal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Blocca scroll della pagina
-  });
-}
-
-// Chiudi modal
-if (closeModalBtn) {
-  closeModalBtn.addEventListener('click', () => {
-    contactModal.classList.remove('active');
-    document.body.style.overflow = ''; // Ripristina scroll
-  });
-}
-
-// Chiudi modal cliccando fuori
-contactModal.addEventListener('click', (e) => {
-  if (e.target === contactModal) {
-    contactModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
-
-// Chiudi modal con tasto ESC
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && contactModal.classList.contains('active')) {
-    contactModal.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.contact-form');
-  const success = document.getElementById('formSuccess');
+  const overlay = document.getElementById('formOverlay');
+  const resetBtn = document.getElementById('resetForm');
 
-  if (!form || !success) return;
+  if (!form || !overlay) return;
 
   form.addEventListener('submit', async (e) => {
-    e.preventDefault(); // BLOCCA Netlify redirect
-
-    const button = form.querySelector('button[type="submit"]');
-    button.disabled = true;
-    button.textContent = 'Invio in corso...';
+    e.preventDefault(); // 🔴 BLOCCA NETLIFY STANDARD
 
     const formData = new FormData(form);
 
@@ -373,16 +334,19 @@ document.addEventListener('DOMContentLoaded', () => {
         body: new URLSearchParams(formData).toString(),
       });
 
-      // SUCCESSO
-      form.style.display = 'none';
-      success.style.display = 'block';
+      overlay.classList.add('active');
+      form.reset();
 
-      success.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() =>{
+        overlay.classList.remove("active")
+      },3500)
 
-    } catch (err) {
-      button.disabled = false;
-      button.textContent = 'Invia messaggio';
+    } catch (error) {
       alert('Errore durante l’invio. Riprova.');
     }
+  });
+
+  resetBtn.addEventListener('click', () => {
+    overlay.classList.remove('active');
   });
 });
