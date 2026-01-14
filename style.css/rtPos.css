@@ -97,15 +97,17 @@
       font-size: 4.5rem;
       font-weight: 700;
       line-height: 1.7;
-      margin-bottom: 2rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+
     }
 
     .article-meta {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 3rem;
       font-size: 1.6rem;
+      gap: 3rem;
       color: rgba(255, 255, 255, 0.8);
     }
 
@@ -425,11 +427,6 @@
       .related-grid {
         grid-template-columns: 1fr;
       }
-
-      .article-meta {
-        font-size: 1.2rem;
-      }
-
       .share-buttons {
         flex-wrap: wrap;
       }
@@ -439,6 +436,10 @@
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
         margin-top: 10rem;
         margin-left: 3%;
+      }
+      .article-meta{
+        font-size: 1.5rem;
+
       }
     }
 
@@ -654,6 +655,10 @@
     right: 1.5rem;
     width: 36px;
     height: 36px;
+  }
+  .article-meta{
+    gap: 2rem;
+    margin-top: 6rem;
   }
 }
 
