@@ -86,12 +86,7 @@ body {
 /* ===========================
    HEADER
 =========================== */
-.container-event {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
-  perspective: 1000px;
-}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -1349,28 +1344,6 @@ body {
   z-index: 1;
 
 }
-
-.event-badge{
-  position: absolute;
-  bottom: 9px;              /* distanza dal fondo immagine */
-  left: 48%;
-  transform: translateX(-50%);
-
-  background: linear-gradient(
-    135deg,
-    var(--color-accent),
-    var(--color-primary)
-  );
-  color: #fff;
-  padding: 0.6rem 3.5rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  border-radius: 7px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  animation: badgePulse 2s ease-in-out infinite;
-  z-index: 2;
-}
-
 .event-date {
   display: inline-block;
   background: var(--color-primary);
@@ -1382,23 +1355,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.event-img {
-  display: block;
-  width: 90%;
-  border-radius: 14px;
-  margin-bottom: 1rem;
-}
-.event-title {
-  font-size: 2.2rem;
-  margin-top: 1.5rem;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  animation: gradientShift 3s ease infinite;
-  background-size: 200% auto;
-}
 
 /*SEZIONE SOLUZIONI*/
 .solution-item {
@@ -1586,11 +1542,6 @@ body {
 }
 .suite-card:hover::before {
   opacity: 1;
-}
-
-.suite-card:hover {
-  transform: translateY(-15px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(0, 56, 112, 0.15);
 }
 
 /* Badge angolo */
