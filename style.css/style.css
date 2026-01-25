@@ -1214,7 +1214,7 @@ body {
 
 /* Immagine nell'altro lato */
 .timeline-image {
-  width: 45%;
+  width: 33%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
