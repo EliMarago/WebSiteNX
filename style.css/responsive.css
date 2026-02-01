@@ -768,6 +768,10 @@
     font-size: 1.3rem;
     padding: 0.8rem 1.2rem;
   }
+  .prodotto-card .prodotto-features li{
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
 }
 
 /* ===========================
@@ -877,6 +881,10 @@
   .timeline-image img{
     width: 100%;
 }
+.prodotto-card .prodotto-features li{
+  font-size: 1.3rem;
+  gap: 1rem;
+}
 }
 
 /* ===========================
@@ -900,5 +908,9 @@
   }
     .timeline-image img{
     width: 100%;
+}
+.prodotto-card .prodotto-features li{
+  font-size: 1.3rem;
+  gap: 1rem;
 }
 }

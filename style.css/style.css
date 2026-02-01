@@ -1,3 +1,6 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* VARIABILI COLORI */
 :root {
   --color-primary: #003870;
@@ -22,7 +25,7 @@ body {
   font-size: 48.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -566,6 +569,7 @@ body {
 
 /*HERO TITLE*/
 .hero-title {
+  font-family: "Montserrat", sans-serif;
   font-size: 5.5rem;
   line-height: 1.2;
   margin-bottom: 2rem;
@@ -2187,6 +2191,7 @@ margin-bottom: 1.5rem;
 }
 .section-prodotti p{
   color: #001a3d;
+
 }
 
 .prodotto-card:hover {
@@ -2207,7 +2212,7 @@ margin-bottom: 1.5rem;
 }
 
 .prodotto-card p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 1.8rem;
   color: var(--color-primary-light);
 }
