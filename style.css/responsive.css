@@ -29,10 +29,11 @@
   .soluzioni-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-    .timeline-image img{
-      width: 80%;
-      max-width: 500px;
-}
+  
+  .timeline-image img {
+    width: 80%;
+    max-width: 500px;
+  }
 }
 
 /* ===========================
@@ -258,6 +259,7 @@
   .timeline::before {
     left: 50px;
   }
+  
   .timeline-icon {
     left: 50px;
     width: 80px;
@@ -305,9 +307,10 @@
   .checkbox label {
     font-size: 1.6rem;
   }
-    .timeline-image img{
+  
+  .timeline-image img {
     width: 100%;
-}
+  }
 }
 
 /* ===========================
@@ -352,26 +355,27 @@
   .icon-wrapper {
     margin-bottom: 10px;
   }
-  .prodotti-grid{
+  
+  .prodotti-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-    .contact-form-box {
+  
+  .contact-form-box {
     padding: 3rem 3rem;
     width: auto;
     margin-left: 5rem;
   }
+  
   .logo-col {
     display: flex;
     align-items: center;
     margin-left: -10rem;
   }
   
-    }
-    .timeline-image img{
+  .timeline-image img {
     width: 100%;
   }
-
-
+}
 
 /* ===========================
    MOBILE - 768px
@@ -380,9 +384,11 @@
   html {
     font-size: 50%;
   }
+  
   .footer-logo img:first-child {
     height: 100px;
   }
+  
   .footer-logo img:last-child {
     height: 60px;
   }
@@ -390,6 +396,7 @@
   .footer-logo {
     gap: 1.5rem;
   }
+  
   /* === HEADER === */
   .header {
     height: 7rem;
@@ -413,23 +420,67 @@
     font-size: 2.5rem;
   }
 
-  /* === HERO === */
+  /* === HERO - CONFIGURAZIONE CORRETTA === */
   .section-hero {
     padding: 2rem 3rem;
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* Rompi il contenitore text-box per poter riordinare */
+  .hero-text-box {
+    display: contents;
+  }
+
+  /* Ordina tutti gli elementi nell'ordine desiderato */
+  .hero-badge {
+    order: 1;
+  }
+
+  .hero-title {
+    order: 2;
+  }
+
+  .hero-dynamic {
+    order: 3;
+    align-self: flex-start; /* Allinea solo questo elemento a sinistra */
+    text-align: left;
+    width: 100%;
   }
 
   .hero-description {
+    order: 4;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
 
   .hero-stats {
+    order: 5;
     grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 0;
+  }
+
+  /* IMMAGINE IN MEZZO */
+  .hero-img-box {
+    order: 6;
+    margin: 2rem 0;
+  }
+
+  /* BOTTONI DOPO L'IMMAGINE */
+  .hero-cta {
+    order: 7;
+    margin: 2rem 0;
+  }
+
+  .hero-trust {
+    order: 6;
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
   }
 
   /* === BUTTONS === */
@@ -651,14 +702,12 @@
   .soluzione-title {
     font-size: 1.7rem;
   }
-  .timeline-image img {
-    width: 90%;
-}
-.logo-col {
-  display: flex;
-  align-items: center;
-  margin-left: -3rem;
-}
+  
+  .logo-col {
+    display: flex;
+    align-items: center;
+    margin-left: -3rem;
+  }
 
   /* === FEATURES === */
   .feature img {
@@ -707,7 +756,7 @@
   /* === PRICING === */
   .pricing-container {
     grid-template-columns: 1fr;
-    max-width: 650px; /* Limita larghezza */
+    max-width: 650px;
     margin: 0 auto;
     padding: 2rem;
   }
@@ -768,7 +817,8 @@
     font-size: 1.3rem;
     padding: 0.8rem 1.2rem;
   }
-  .prodotto-card .prodotto-features li{
+  
+  .prodotto-card .prodotto-features li {
     font-size: 1.3rem;
     gap: 1rem;
   }
@@ -806,7 +856,7 @@
 
   /* === HERO === */
   .hero-title {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
   }
 
   .hero-dynamic {
@@ -878,13 +928,15 @@
   .timeline-icon {
     transform: translate(-50%, -250%);
   }
-  .timeline-image img{
+  
+  .timeline-image img {
     width: 100%;
-}
-.prodotto-card .prodotto-features li{
-  font-size: 1.3rem;
-  gap: 1rem;
-}
+  }
+  
+  .prodotto-card .prodotto-features li {
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
 }
 
 /* ===========================
@@ -906,11 +958,13 @@
   .stat-card {
     padding: 2.5rem 1.5rem;
   }
-    .timeline-image img{
+  
+  .timeline-image img {
     width: 100%;
-}
-.prodotto-card .prodotto-features li{
-  font-size: 1.3rem;
-  gap: 1rem;
-}
+  }
+  
+  .prodotto-card .prodotto-features li {
+    font-size: 1.3rem;
+    gap: 1rem;
+  }
 }
