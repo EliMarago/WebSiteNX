@@ -52,9 +52,24 @@ function closeMenu() {
 btnNav?.addEventListener("click", toggleMenu);
 navOverlay?.addEventListener("click", closeMenu);
 
-document.querySelectorAll(".main-nav-link").forEach(link => {
+const navLinks = document.querySelectorAll(".main-nav-link[href^='#']");
+
+function updateActiveNav(targetId) {
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === targetId);
+  });
+}
+
+function initActiveNav() {
+  const hash = window.location.hash || "#home";
+  updateActiveNav(hash);
+}
+
+navLinks.forEach(link => {
   link.addEventListener("click", closeMenu);
 });
+
+initActiveNav();
 
 /* ===============================
    MODAL
@@ -122,6 +137,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     e.preventDefault();
     closeMenu();
+    updateActiveNav(targetId);
 
     setTimeout(() => {
       target.scrollIntoView({
@@ -131,6 +147,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }, 150);
   });
 });
+
+const sectionIds = Array.from(navLinks)
+  .map(link => link.getAttribute("href"))
+  .filter(Boolean)
+  .map(href => href.replace("#", ""));
+
+const sections = sectionIds
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+
+if (sections.length) {
+  const sectionObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          updateActiveNav(`#${entry.target.id}`);
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.35,
+      rootMargin: "-20% 0px -50% 0px",
+    }
+  );
+
+  sections.forEach(section => sectionObserver.observe(section));
+}
 
 /* ===============================
    SCROLL ANIMATIONS
@@ -376,6 +420,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (newsGrid && newsPrev && newsNext) {
     const updateNewsNavVisibility = () => {
+      const newsCount = newsGrid.querySelectorAll('.news-card').length;
+      newsGrid.classList.toggle('single-item', newsCount === 1);
+
       if (newsGrid.scrollWidth <= newsGrid.clientWidth) {
         newsPrev.classList.add('hidden');
         newsNext.classList.add('hidden');
