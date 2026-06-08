@@ -71,7 +71,7 @@
     .article-hero {
       background: linear-gradient(135deg, var(--color-primary) 0%, #001a3d 100%);
       color: white;
-      padding: 16rem 4rem;
+      padding: 14rem 0rem;
       text-align: center;
     }
 
